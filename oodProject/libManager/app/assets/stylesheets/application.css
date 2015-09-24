@@ -14,6 +14,257 @@
  *= require_self
  */
 
-body {
-    padding: 20px;
+body
+{
+    padding: 0;
+    margin: 0;
+}
+input:focus { outline: none; }
+.hpTopBar
+{
+    position: absolute;
+    height: 50px;
+    width: 100%;
+    background: rgb(0, 0, 0);
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    border-bottom: 1px solid rgba(0,0,0,0.8);
+}
+.hpHeader
+{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    line-height: 50px;
+    color: rgb(255,255,255);
+    left: 20px;
+    font-size: 21px;
+}
+
+.hpBody
+{
+    position: absolute;
+    top: 50px;
+    bottom: 0;
+    width: 100%;
+    padding: 80px 0;
+}
+
+.ghost-button {
+    display: block;
+    width: 340px;
+    padding: 10px;
+    color: #9418ff;
+    border: 1px solid #9418ff;
+    text-align: center;
+    outline: none;
+    text-decoration: none;
+    left: 0;
+    right: 0;
+    margin: 30px auto;
+}
+.ghost-button:hover,
+.ghost-button:active,
+.ghost-button:visited {
+    background-color: rgba(85, 12, 255, 0.2);
+    color: #9418ff;
+}
+
+.ghost-button {
+    display: block;
+    width: 340px;
+    padding: 10px;
+    color: #ff3b33;
+    border: 1px solid #ff3b33;
+    text-align: center;
+    outline: none;
+    text-decoration: none;
+    left: 0;
+    right: 0;
+    margin: 30px auto;
+}
+.ghost-button:hover,
+.ghost-button:visited {
+    background: white;
+    box-shadow: 0px 1px 1px 1px rgba(255, 59, 51, 0.2);
+    -webkit-box-shadow: 0px 1px 1px 1px rgba(255, 59, 51, 0.2);
+    color: #ff3b33;
+}
+
+.ghost-button:active {
+    background: white;
+    box-shadow: 0px 1px 1px 2px rgba(255, 59, 51, 0.2);
+    -webkit-box-shadow: 0px 1px 1px 2px rgba(255, 59, 51, 0.2);
+    color: #ff3b33;
+}
+
+.formBody {
+    position: absolute;
+    width: 400px;
+    background-color: #f7f7f9;
+    border: 1px solid #eeeef0;
+    left: 0;
+    right: 0;
+    top: 150px;
+    margin: 0 auto;
+    padding-top: 40px;
+    padding-bottom: 80px;
+    box-sizing: border-box;
+}
+.formInput {
+    -webkit-appearance: none;
+    -webkit-rtl-ordering: logical;
+    -webkit-user-select: text;
+    background-color: rgb(255, 255, 255);
+    border-bottom-color: rgb(204, 204, 204);
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-left-color: rgb(204, 204, 204);
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: rgb(204, 204, 204);
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-color: rgb(204, 204, 204);
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-top-style: solid;
+    border-top-width: 1px;
+    box-shadow: rgba(0, 0, 0, 0.0745098) 0px 1px 1px 0px inset;
+    box-sizing: border-box;
+    color: rgb(85, 85, 85);
+    cursor: auto;
+    display: block;
+    font-size: 12px;
+    height: 40px;
+    letter-spacing: normal;
+    line-height: 20px;
+    padding-bottom: 6px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 6px;
+    text-align: start;
+    text-indent: 0px;
+    text-rendering: auto;
+    transition-delay: 0s, 0s;
+    transition-duration: 0.15s, 0.15s;
+    transition-property: border-color, box-shadow;
+    transition-timing-function: ease-in-out, ease-in-out;
+    width: 300px;
+    word-spacing: 0px;
+    margin: 20px auto;
+    left: 0;
+    right: 0;
+}
+.formInput:focus {
+    border-color: #66afe9;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+}
+
+.button {
+    position: absolute;
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    font-size: 14px;
+    font-stretch: normal;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    height: 36px;
+    letter-spacing: normal;
+    line-height: 20px;
+    padding-bottom: 6px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 6px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: 80px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    text-decoration: none;
+    font-size: 12px;
+}
+.signUpButton {
+    background-color: rgb(92, 184, 92);
+    border-bottom-color: rgb(76, 174, 76);
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-left-color: rgb(76, 174, 76);
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: rgb(76, 174, 76);
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-color: rgb(76, 174, 76);
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-top-style: solid;
+    border-top-width: 1px;
+}
+.signUpButton:hover {
+    color: #fff;
+    background-color: #449d44;
+    border-color: #398439;
+}
+
+.loginButton {
+    position: absolute;
+    top: 10px;
+    margin: 0 -120px;
+    left: 100%;
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    font-stretch: normal;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    font-size: 12px;
+    height: 30px;
+    letter-spacing: normal;
+    line-height: 15px;
+    padding-bottom: 6px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 6px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: 80px;
+    text-decoration: none;
+    background-color: #337ab7;
+    border-bottom-color: #2e6da4;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-left-color: #2e6da4;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: #2e6da4;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-color: #2e6da4;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-top-style: solid;
+    border-top-width: 1px;
+}
+.loginButton:visited
+{
+    color: #fff;
+}
+.loginButton:hover {
+    background-color: #286090;
+    border-color: #2e6da4;
 }

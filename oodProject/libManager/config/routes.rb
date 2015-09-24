@@ -4,7 +4,12 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'users#index'
+  root 'users#signUp'
+
+  #get 'static_pages/signUp'
+  get 'login' => 'static_pages#login'
+  get 'login/admin' => 'static_pages#loginAdmin'
+  get 'login/patron' => 'static_pages#loginPatron'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
