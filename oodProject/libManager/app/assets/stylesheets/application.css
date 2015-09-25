@@ -18,6 +18,7 @@ body
 {
     padding: 0;
     margin: 0;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 input:focus { outline: none; }
 .hpTopBar
@@ -100,17 +101,24 @@ input:focus { outline: none; }
 }
 
 .formBody {
-    position: absolute;
+    position: relative;
     width: 400px;
-    background-color: #f7f7f9;
-    border: 1px solid #eeeef0;
+    background: rgba(239,239,239,.5);
+    border: 1px solid rgba(239,239,239,.8);
     left: 0;
     right: 0;
     top: 150px;
     margin: 0 auto;
-    padding-top: 40px;
-    padding-bottom: 80px;
+    padding-top: 15px;
+    padding-bottom: 60px;
     box-sizing: border-box;
+}
+.formHeader {
+    padding-bottom: 15px;
+    text-align: center;
+    /*color: #5a5c60;*/
+    color: #a80000;
+    text-shadow: 1px 1px 2px #c5c5c5;
 }
 .formInput {
     -webkit-appearance: none;
@@ -177,7 +185,7 @@ input:focus { outline: none; }
     font-weight: normal;
     height: 36px;
     letter-spacing: normal;
-    line-height: 20px;
+    line-height: 22px;
     padding-bottom: 6px;
     padding-left: 12px;
     padding-right: 12px;
@@ -185,7 +193,7 @@ input:focus { outline: none; }
     text-align: center;
     vertical-align: middle;
     white-space: nowrap;
-    width: 80px;
+    width: 150px;
     margin: auto;
     left: 0;
     right: 0;
@@ -232,7 +240,7 @@ input:focus { outline: none; }
     font-size: 12px;
     height: 30px;
     letter-spacing: normal;
-    line-height: 15px;
+    line-height: 17px;
     padding-bottom: 6px;
     padding-left: 12px;
     padding-right: 12px;

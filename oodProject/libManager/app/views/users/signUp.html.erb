@@ -1,9 +1,24 @@
 <div class = "hpTopBar">
-  <h1 class = "hpHeader">THe LibraRy</h1>
+  <h1 class = "hpHeader">the librarian</h1>
   <a href = "/login" class = "button loginButton">Login</a>
 </div>
-<div class = "formBody">
+<!--<div class = "formBody">
   <input class = "formInput" type = "email" placeholder = "your@email.com">
   <input class = "formInput" type = "password" placeholder = "password">
+  <input class = "formInput" type = "password" placeholder = "confirm password">
   <a href = "/signUpUser" class = "button signUpButton">Sign Up</a>
+</div>-->
+
+<div class = "formBody">
+  <% provide(:title, 'Sign up') %>
+  <h1 class = "formHeader">Sign up</h1>
+  <%= form_for(@user) do |f| %>
+      <%= f.email_field :email, class: "formInput", placeholder: "your@email.com" %>
+
+      <%= f.password_field :password, class: "formInput", placeholder: "password" %>
+
+      <%= f.password_field :password_confirmation, class: "formInput", placeholder: "confirm password" %>
+
+      <%= f.submit "Create my account", class: "button signUpButton" %>
+  <% end %>
 </div>
