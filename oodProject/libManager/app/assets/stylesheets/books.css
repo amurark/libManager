@@ -1,0 +1,42 @@
+.booksHeader
+{
+    position: relative;
+    top:80px;
+    width: 100%;
+    text-align: center;
+}
+
+.booksHeader2
+{
+    position: relative;
+    top: 100px;
+    width: 100%;
+    text-align: center;
+}
+
+.booksOptions
+{
+    position: relative;
+    top : 150px;
+
+}
+
+.ghost-button2 {
+    display: block;
+    width: 400px;
+    padding: 10px;
+    color: #4567ff;
+    border: 1px solid #4567ff;
+    text-align: center;
+    outline: none;
+    text-decoration: none;
+    left: 0;
+    right: 0;
+    margin: 30px auto;
+}
+.ghost-button2:hover,
+.ghost-button2:active,
+.ghost-button2:visited {
+    background-color: rgba(69, 103, 255, 0.2);
+    color: #4567ff;
+}
