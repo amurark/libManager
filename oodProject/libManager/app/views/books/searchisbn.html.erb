@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+
+
+<h1>Search books via ISBN</h1>
+
+<%= form_tag("/books/1", method: "get") do %>
+  <%= label_tag(:isbn, "Enter ISBN:") %>
+  <%= text_field_tag :isbn, params[:isbn] %>
+  <%= submit_tag("Search") %>
+<% end %>
+
+
+

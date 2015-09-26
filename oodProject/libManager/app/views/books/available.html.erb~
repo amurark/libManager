@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<h1>List of all books currently available for checkout</h1>
+
+<table>
+<table cellspacing="10"> 
+<table cellpadding="10">
+  <thead>
+    <tr>
+      <th>Isbn</th>
+      <th>Title</th>
+      <th>Authors</th>
+      <th>Description</th>
+      <th>Status</th>    
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+   <% @books.reject{|book| book.Status == true}.each do |book| %>    
+      <tr>
+        <td><%= book.ISBN %></td>
+        <td><%= book.Title %></td>
+        <td><%= book.Authors %></td>
+        <td><%= book.Description %></td>
+        <td><%= 'Available' %></td>              
+        <td><%= link_to 'Show', book %></td>
+        <td><%= link_to 'Edit', edit_book_path(book) %></td>
+       </tr>
+   <% end %> 
+  </tbody>
+</table>
+
+<br>
+
+

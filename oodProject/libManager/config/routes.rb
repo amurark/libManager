@@ -1,15 +1,36 @@
 Rails.application.routes.draw do
+
   resources :users
+  resources :sessions
+  resources :books
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   root 'users#signUp'
 
+  get    'login'   => 'sessions#new'
+  post   'login'   => 'sessions#create'
+  delete 'logout'  => 'sessions#destroy'
+
+  get 'books' => 'books#index'
+
+  #for complete list of books
+  get 'full' => 'books#full'
+
+  #for books available for checkout
+  get 'available' => 'books#available'
+
+  #for searching books via ISBN
+  get 'searchisbn' => 'books#searchisbn'
+
+  #for searching books via ISBN
+  get 'search' => 'books#show'
+
   #get 'static_pages/signUp'
-  get 'login' => 'static_pages#login'
-  get 'login/admin' => 'static_pages#loginAdmin'
-  get 'login/patron' => 'static_pages#loginPatron'
+  # get 'login' => 'static_pages#login'
+  # get 'login/admin' => 'static_pages#loginAdmin'
+  # get 'login/patron' => 'static_pages#loginPatron'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

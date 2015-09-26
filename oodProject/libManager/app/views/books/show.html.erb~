@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Book ISBN:</strong>
+  <%= @book.ISBN %>
+<br>
+  <strong>Book Title:</strong>
+  <%= @book.Title %>
+<br>
+  <strong>Book Authors:</strong>
+  <%= @book.Authors %>
+<br>
+  <strong>Book Description :</strong>
+  <%= @book.Description %>
+<br>
+  <strong>BOOK Status:</strong>
+  <%= 'Available' if @book.Status==false %>
+  <%= 'Not Available' if @book.Status==true %>
+</p>
+
+
+
+

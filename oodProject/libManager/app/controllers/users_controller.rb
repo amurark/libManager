@@ -17,9 +17,12 @@ class UsersController < ApplicationController
     if @user.save
       redirect_to @user, notice: 'User was created'
     else
-      logger.debug "wassip"
       render action: "signUp"
     end
+  end
+
+  def books
+    #@books = Book.all
   end
 
 

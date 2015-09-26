@@ -1,30 +1,9 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
+<div class = "hpTopBar">
+  <h1 class = "hpHeader">the librarian</h1>
+  <h3 style = "color:white; position:absolute; right: 10px">Welcome <%= @user.email %></h3>
+</div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @user.name %>
-</p>
-
-<p>
-  <strong>Type:</strong>
-  <%= @user.ty %>
-</p>
-
-<p>
-  <strong>Age:</strong>
-  <%= @user.age %>
-</p>
-
-<p>
-  <strong>Sex:</strong>
-  <%= @user.sex %>
-</p>
-
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<div class = "hpBody">
+  <%= link_to "check out books", '/books', :method => :get, class:  "ghost-button"%>
+</div>
