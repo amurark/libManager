@@ -14,7 +14,6 @@ class UsersController < ApplicationController
   # GET /users/1.json
   def create
     @user = User.new(user_params)
-    p User.instance_variable_get(:@user)
     if @user.save
       redirect_to @user, notice: 'User was created'
     else
