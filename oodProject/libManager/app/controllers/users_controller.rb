@@ -14,6 +14,7 @@ class UsersController < ApplicationController
   # GET /users/1.json
   def create
     @user = User.new(user_params)
+    p User.instance_variable_get(:@user)
     if @user.save
       redirect_to @user, notice: 'User was created'
     else
@@ -71,6 +72,6 @@ class UsersController < ApplicationController
     end
 
     def user_params
-      params.require(:user).permit(:email, :password, :password_confirmation)
+      params.require(:user).permit(:email, :password, :password_confirmation, :name)
     end
 end

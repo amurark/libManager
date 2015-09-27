@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+<div class = "hpTopBar">
+  <h1 class = "hpHeader">the librarian</h1>
+</div>
+<p id="notice"><%= notice %></p>
+<div class = "bookList">
+    <h1 style = "color:#603fab;">Search books via Author</h1>
+    <%= form_tag ('/fullsearchauthor'), method: "get" do %>
+      <%= text_field_tag :author, params[:author], class: "formInput", placeholder: "Enter Author of the Book:" %>
+      <%= submit_tag "Search", :name => nil, class: "searchButton purpleButton" %>
+    <% end %>
+</div>
+
+

@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  attr_accessor :password
+  #attr_accessor :password
 
   email_regex = /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]+)\z/i
 
@@ -13,6 +13,7 @@ class User < ActiveRecord::Base
 
 
   # before_save :encrypt_password
+=begin
   def has_password?(submitted_password)
     encrypted_password == submitted_password
   end
@@ -22,6 +23,7 @@ class User < ActiveRecord::Base
     return nil if user.nil?
     return user if user.has_password?(submitted_password)
   end
+=end
   #
   # private
   # def encrypt_password

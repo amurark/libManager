@@ -1,13 +1,15 @@
 <p id="notice"><%= notice %></p>
-
-
-<h1>Search books via ISBN</h1>
-
-<%= form_tag("/books/1", method: "get") do %>
-  <%= label_tag(:isbn, "Enter ISBN:") %>
-  <%= text_field_tag :isbn, params[:isbn] %>
-  <%= submit_tag("Search") %>
-<% end %>
+<div class = "hpTopBar">
+  <h1 class = "hpHeader">the librarian</h1>
+</div>
+<p id="notice"><%= notice %></p>
+<div class = "bookList">
+  <h1 style = "color:#3aab90;">Search books via ISBN</h1>
+  <%= form_tag ('/fullsearchisbn'), method: "get" do %>
+      <%= text_field_tag :isbn, params[:isbn], class: "formInput", placeholder: "Enter ISBN:" %>
+      <%= submit_tag "Search", :name => nil, class: "searchButton seaGreenButton" %>
+  <% end %>
+</div>
 
 
 

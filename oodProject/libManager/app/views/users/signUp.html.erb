@@ -13,6 +13,8 @@
   <% provide(:title, 'Sign up') %>
   <h1 class = "formHeader">Sign up</h1>
   <%= form_for(@user) do |f| %>
+      <%= f.text_field :name, class: "formInput", placeholder: "userName" %>
+
       <%= f.email_field :email, class: "formInput", placeholder: "your@email.com" %>
 
       <%= f.password_field :password, class: "formInput", placeholder: "password" %>

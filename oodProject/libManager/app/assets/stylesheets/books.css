@@ -18,7 +18,12 @@
 {
     position: relative;
     top : 150px;
-
+}
+.bookList
+{
+    position: relative;
+    top : 150px;
+    text-align: center;
 }
 
 .ghost-button2 {

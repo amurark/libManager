@@ -4,7 +4,7 @@
 <p id="notice"><%= notice %></p>
 <div class = "bookList">
 
-    <h1 style = "color:#1fab78;">List of all books currently available for checkout</h1>
+    <h1 style = "color:#ab2335;">Here is what you were looking for</h1>
 
     <table cellpadding="0">
       <thead>
@@ -18,15 +18,16 @@
       </thead>
 
       <tbody>
-       <% @books.reject{|book| book.Status == true}.each do |book| %>
+        <% @books.each do |book| %>
           <tr>
             <td><%= book.ISBN %></td>
             <td><%= book.Title %></td>
             <td><%= book.Authors %></td>
             <td><%= book.Description %></td>
-            <td><%= 'Available' %></td>
+            <td><%= 'available' if book.Status == false %>
+            <%= 'not available' if book.Status == true %></td>
           </tr>
-       <% end %>
+        <% end %>
       </tbody>
     </table>
 </div>

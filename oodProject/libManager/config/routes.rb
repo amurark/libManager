@@ -15,6 +15,8 @@ Rails.application.routes.draw do
 
   get 'books' => 'books#index'
 
+
+
   #for complete list of books
   get 'full' => 'books#full'
 
@@ -24,8 +26,29 @@ Rails.application.routes.draw do
   #for searching books via ISBN
   get 'searchisbn' => 'books#searchisbn'
 
-  #for searching books via ISBN
-  get 'search' => 'books#show'
+  #for displaying books searched via ISBN
+  get 'fullsearchisbn' => 'books#fullsearch'
+
+  #for searching books via title
+  get 'searchtitle' => 'books#searchtitle'
+
+  #for displaying books searched via title
+  get 'fullsearchtitle' => 'books#fullsearch'
+
+  #for searching books via Author
+  get 'searchauthor' => 'books#searchauthor'
+
+  #for displaying books searched via author
+  get 'fullsearchauthor' => 'books#fullsearch'
+
+  #for searching books via Description
+  get 'searchdescription' => 'books#searchdescription'
+
+  #for displaying books searched via Description
+  get 'fullsearchdescription' => 'books#fullsearch'
+
+
+
 
   #get 'static_pages/signUp'
   # get 'login' => 'static_pages#login'

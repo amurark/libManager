@@ -5,38 +5,53 @@ class BooksController < ApplicationController
   # GET /books
   # GET /books.json
   def index
-    @books = Book.all
+   #@books = Book.all
   end
 
   #for obtaining complete list of books
   def full
-    @books = Book.all
+   @books = Book.all        
   end
 
-   #for obtaining only books that are currently available for checkout
+  #for displaying book searched via ISBN
+  def fullsearch
+   if params[:isbn]
+      @books = Book.where(:ISBN => params[:isbn])
+   elsif params[:title]
+      @books = Book.where("Title LIKE :title1", { :title1 => "#{params[:title]}%"}) 
+   elsif params[:author]
+      @books = Book.where("Authors LIKE :author1", { :author1 => "#{params[:author]}%"})
+   elsif params[:description]
+      @books = Book.where("Description LIKE :description1", { :description1 => "#{params[:description]}%"})           
+   else
+      @books = Book.all
+   end
+  end
+
+    #for obtaining only books that are currently available for checkout
   def available
     @books = Book.all
   end
 
-   #mytest
+   #for searching books via ISBN
   def searchisbn
-    @books = Book.all
   end
 
-  #mytest
-  def search     
-    @book = Book.where(:isbn)
+  #for searching books via Title
+  def searchtitle
   end
 
-  #mytest
-  def users     
-    @users = User.all
-  end
+  #for searching books via Author
+  def searchauthor
+  end  
+
+   #for searching books via description
+  def searchdescription
+  end  
 
   # GET /books/1
   # GET /books/1.json
   def show
-     @book = Book.find(params[:id])
   end
 
   # GET /books/new

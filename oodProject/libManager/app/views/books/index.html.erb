@@ -1,19 +1,18 @@
 <div class = "hpTopBar">
   <h1 class = "hpHeader">the librarian</h1>
 </div>
-
 <p id="notice"><%= notice %></p>
-
 <h1 class = "booksHeader">Welcome to our library</h1>
-
 <h2 class = "booksHeader2">What would you like to do?</h2>
-
-
 <p class = "booksOptions">
-<%= link_to "Click here to view books currently available for checkout", '/available', :method => :get, class: "ghost-button2" %>
-<%= link_to "Click here to view complete list of books", '/full', :method => :get, class: "ghost-button2" %>
-<%= link_to "Click here to search books by ISBN", '/searchisbn', :method => :get, class: "ghost-button2" %>
+    <%= link_to "View complete list of books", '/full', :method => :get, class: "ghost-button2" %>
+    <%= link_to "View books currently available for checkout", '/available', :method => :get, class: "ghost-button2" %>
+    <%= link_to "Search books by ISBN", '/searchisbn', :method => :get, class: "ghost-button2" %>
+    <%= link_to "Search books by Title", '/searchtitle', :method => :get, class: "ghost-button2" %>
+    <%= link_to "Search books by Author ", '/searchauthor', :method => :get, class: "ghost-button2" %>
+    <%= link_to "Search books by Description ", '/searchdescription', :method => :get, class: "ghost-button2" %>
 </p>
+
 
 
 

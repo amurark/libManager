@@ -277,3 +277,118 @@ input:focus { outline: none; }
     background-color: #286090;
     border-color: #2e6da4;
 }
+
+.searchButton
+{
+    position: absolute;
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    font-size: 14px;
+    font-stretch: normal;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    height: 36px;
+    letter-spacing: normal;
+    line-height: 22px;
+    padding-bottom: 6px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 6px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: 150px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    text-decoration: none;
+    font-size: 12px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-top-style: solid;
+    border-top-width: 1px;
+}
+.greenButton
+{
+    background-color: rgb(92, 184, 92);
+    border-bottom-color: rgb(76, 174, 76);
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-left-color: rgb(76, 174, 76);
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: rgb(76, 174, 76);
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-color: rgb(76, 174, 76);
+}
+.purpleButton
+{
+    background-color: #603fab;
+    border-bottom-color: #603fab;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-left-color: #603fab;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: #603fab;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-color: #603fab;
+}
+
+.seaGreenButton
+{
+    background-color: #3aab90;
+    border-bottom-color: #3aab90;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-left-color: #3aab90;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: #3aab90;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-color: #3aab90;
+}
+
+.blueButton
+{
+    background-color: #2061ab;
+    border-bottom-color: #2061ab;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-left-color: #2061ab;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: #2061ab;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-color: #2061ab;
+}
+.redButton
+{
+    background-color: #ab2335;
+    border-bottom-color: #ab2335;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-left-color: #ab2335;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: #ab2335;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-color: #ab2335;
+}

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+<div class = "hpTopBar">
+  <h1 class = "hpHeader">the librarian</h1>
+</div>
+<p id="notice"><%= notice %></p>
+<div class = "bookList">
+  <h1 style = "color:#ab2335;">Search books via Description</h1>
+  <%= form_tag ('/fullsearchdescription'), method: "get" do %>
+      <%= text_field_tag :description, params[:description], class: "formInput", placeholder: "Enter description of the book:" %>
+      <%= submit_tag "Search", :name => nil, class: "searchButton redButton" %>
+  <% end %>
+</div>
+
+
