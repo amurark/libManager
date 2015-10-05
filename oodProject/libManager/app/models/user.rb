@@ -1,16 +1,16 @@
 class User < ActiveRecord::Base
   #attr_accessor :password
   #attr_accessor :name, :email #new line
-  has_secure_password #new code.
+  has_secure_password
   EMAIL_REGEX = /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]+)\z/i
 
   before_save :alter_data
-
+  before_save :create_remember_token
   def alter_data
     self.email = email.downcase
     self.ty = 2
   end
-  
+
   validates :name, :presence => true,
             length: {maximum: 50} #new code.
 
@@ -22,5 +22,10 @@ class User < ActiveRecord::Base
             :length => {:within => 6..40}
 
   validates :password_confirmation, presence: true
+
+  private
+    def create_remember_token
+      self.remember_token = SecureRandom.urlsafe_base64
+    end
 
 end
