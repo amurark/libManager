@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Book isbn:</strong>
+  <%= @history.book_isbn %>
+</p>
+
+<p>
+  <strong>User email:</strong>
+  <%= @history.user_email %>
+</p>
+
+<p>
+  <strong>Checkout time:</strong>
+  <%= @history.checkout_time %>
+</p>
+
+<p>
+  <strong>Return time:</strong>
+  <%= @history.return_time %>
+</p>
+
+<%= link_to 'Edit', edit_history_path(@history) %> |
+<%= link_to 'Back', histories_path %>
