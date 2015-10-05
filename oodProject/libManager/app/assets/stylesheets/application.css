@@ -423,3 +423,27 @@ input:focus { outline: none; }
     border-right-width: 1px;
     border-top-color: #ab2335;
 }
+
+.userName
+{
+    position:relative;
+    margin:0 auto;
+    text-align: center;
+    font-weight: bold;
+}
+
+.userOptions
+{
+    color:white;
+    position:relative;
+    float: right;
+    height: 100%;
+    line-height: 48px;
+    margin: 0 10px;
+    text-decoration:none;
+}
+.userOptions:visited
+{
+    color:white;
+    text-decoration:none;
+}

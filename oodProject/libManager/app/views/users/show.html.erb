@@ -1,13 +1,16 @@
 
 <div class = "hpTopBar">
   <h1 class = "hpHeader">the librarian</h1>
-  <p style = "color:white; position:absolute; right: 10px">welcome <b><%= @user.email %></b></p>
+  <%= link_to "Sign out", signout_path, method: "delete", class: "userOptions" %>
 </div>
+
 <% flash.each do |key, value| %>
     <div class="flash alert alert-<%= key %>"><%= value %></div>
 <% end %>
 <div class = "hpBody">
   <%= yield %>
-  <%=@user.name%>,<%=@user.email%>
+  <h2 class = "userName">Welcome <%= @user.name %></h2>
   <%= link_to "check out books", '/books', :method => :get, class:  "ghost-button"%>
 </div>
+
+
