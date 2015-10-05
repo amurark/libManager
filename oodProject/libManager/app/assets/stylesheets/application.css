@@ -164,7 +164,7 @@ input:focus { outline: none; }
     transition-timing-function: ease-in-out, ease-in-out;
     width: 300px;
     word-spacing: 0px;
-    margin: 20px auto;
+    margin: 0px auto 20px auto;
     left: 0;
     right: 0;
 }
@@ -172,6 +172,37 @@ input:focus { outline: none; }
     border-color: #66afe9;
     -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
     box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+}
+
+.field_with_errors {
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background-color: transparent;
+}
+.field_with_errors>.formInput {
+    border-color: #e93c2c;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(233, 19, 16, 0.6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(233, 47, 33, 0.6);
+}
+
+.alert-error
+{
+    text-align: center;
+}
+
+#error_expl>ul
+{
+    list-style: none;
+}
+
+.flash
+{
+    font-size: 18px;
+    color: dodgerblue;
+    top: 80px;
+    position: relative;
+    text-align: center;
 }
 
 .button {

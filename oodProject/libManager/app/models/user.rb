@@ -1,38 +1,26 @@
 class User < ActiveRecord::Base
   #attr_accessor :password
+  #attr_accessor :name, :email #new line
+  has_secure_password #new code.
+  EMAIL_REGEX = /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]+)\z/i
 
-  email_regex = /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]+)\z/i
+  before_save :alter_data
+
+  def alter_data
+    self.email = email.downcase
+    self.ty = 2
+  end
+  
+  validates :name, :presence => true,
+            length: {maximum: 50} #new code.
 
   validates :email, :presence => true,
             :uniqueness => {:case_sensitive => false},
-            :format => {:with => email_regex}
+            :format => {:with => EMAIL_REGEX}
 
-  validates :password, :presence => true,
-            :confirmation => true,
+  validates :password, :confirmation => true,
             :length => {:within => 6..40}
 
-
-  # before_save :encrypt_password
-=begin
-  def has_password?(submitted_password)
-    encrypted_password == submitted_password
-  end
-
-  def self.authenticate(email, submitted_password)
-    user = find_by_email(email)
-    return nil if user.nil?
-    return user if user.has_password?(submitted_password)
-  end
-=end
-  #
-  # private
-  # def encrypt_password
-  #   self.salt = Digest::SHA2.hexdigest("#{Time.now.utc}--#{password}") if self.new_record?
-  #   self.encrypted_password = encrypt(password)
-  # end
-  #
-  # def encrypt(pass)
-  #   Digest::SHA2.hexdigest("#{self.salt}--#{pass}")
-  # end
+  validates :password_confirmation, presence: true
 
 end
