@@ -32,6 +32,14 @@ class UsersController < ApplicationController
     @users = User.all
   end
 
+  def toggle
+    @user = User.find(params[:id])
+    @user.update_attribute(:ty, 1)
+    @user.save
+
+    redirect_to user_path(@user)
+  end
+
 
 
   def show
@@ -78,6 +86,6 @@ class UsersController < ApplicationController
   end
 
   def user_params
-    params.require(:user).permit(:email, :password, :password_confirmation, :name)
+    params.require(:user).permit(:email, :password, :password_confirmation, :name, :ty)
   end
 end

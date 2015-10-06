@@ -8,16 +8,20 @@
       <th>Name</th>
       <th>Email</th>
       <th>User type</th>
+      <th>Make admin</th>
     </tr>
     </thead>
 
     <tbody>
-    <% @users.each do |user| %>
+    <% @users.reject{|user| user.ty == 0 && user.id == current_user.id}.each do |user| %>
         <tr>
           <td><%= user.name %></td>
           <td><%= user.email %></td>
           <td><%= 'admin' if user.ty == 0 || user.ty == 1 %>
             <%= 'patron' if user.ty == 2 %></td>
+          <td>
+            <%=link_to (user.ty == 2 ? "admin" : ""), toggle_user_path(user) if user.ty == 2 %>
+          </td>
         </tr>
     <% end %>
     </tbody>

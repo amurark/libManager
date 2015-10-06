@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
 
   def alter_data
     self.email = email.downcase
-    self.ty = 2
+    #self.ty = 2
   end
 
   validates :name, :presence => true,

@@ -454,3 +454,9 @@ input:focus { outline: none; }
     border-left: 1px solid #e1d6d9;
     text-decoration:none;
 }
+
+tr a:active, tr a:hover {
+    color: #000 !important;
+    background:transparent !important;
+    text-decoration: underline !important;
+}
