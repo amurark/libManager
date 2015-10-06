@@ -1,45 +1,24 @@
 <%= form_for(@book) do |f| %>
-  <% if @book.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@book.errors.count, "error") %> prohibited this book from being saved:</h2>
+  <div class = "formBody">
+    <h1 class = "formHeader">Add a book</h1>
+    <% if @book.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@book.errors.count, "error") %> Prohibited this book from being saved:</h2>
 
-      <ul>
-      <% @book.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :ISBN %><br>
-    <%= f.text_field :ISBN %>
-  </div>
-  <div class="field">
-    <%= f.label :Title %><br>
-    <%= f.text_field :Title %>
-  </div>
-  <div class="field">
-    <%= f.label :Authors %><br>
-    <%= f.text_field :Authors %>
-  </div>
-  <div class="field">
-    <%= f.label :Description %><br>
-    <%= f.text_field :Description %>
-  </div>
-  <div class="field">
-    <%= f.label :Status %><br>
-    <%= f.check_box :Status %>
-  </div>
-  <div class="field">
-    <%= f.label :Lastuser %><br>
-    <%= f.text_field :Lastuser %>
-  </div>
-  <div class="field">
-    <%= f.label :Datetime %><br>
-    <%= f.datetime_select :Datetime %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
+          <ul>
+          <% @book.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
+    <% end %>
+    <%= f.text_field :ISBN, class: "formInput", placeholder: "ISBN" %>
+    <%= f.text_field :Title, class: "formInput", placeholder: "Title" %>
+    <%= f.text_field :Authors, class: "formInput", placeholder: "Authors" %>
+    <%= f.text_field :Description, class: "formInput", placeholder: "Description" %>
+    <%= f.text_field :Status, class: "formInput", placeholder: "Status" %>
+    <%= f.text_field :Lastuser, class: "formInput", placeholder: "Lastuser" %>
+    <%= f.text_field :Datetime, class: "formInput", placeholder: "Datetime" %>
+    <%= f.submit "Add a new book", class: "button signUpButton" %>
   </div>
 <% end %>

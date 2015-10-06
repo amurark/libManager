@@ -455,8 +455,8 @@ input:focus { outline: none; }
     text-decoration:none;
 }
 
-tr a:active, tr a:hover {
-    color: #000 !important;
+tr a:active, tr a:hover, tr a:visited {
+    color: #666 !important;
     background:transparent !important;
     text-decoration: underline !important;
 }

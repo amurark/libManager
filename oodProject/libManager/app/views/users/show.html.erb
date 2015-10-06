@@ -9,7 +9,8 @@
   <%= link_to "Check out books", '/books', :method => :get, class:  "ghost-button"%>
   <% if current_user.ty == 0 || current_user.ty == 1 %>
       <%= link_to "Check users", '/users_all', :method => :get, class:  "ghost-button"%>
-      <%= link_to "Add/delete admins", '/users', :method => :get, class:  "ghost-button"%>
+      <%= link_to "Make admins", '/make_admin', :method => :get, class:  "ghost-button"%>
+      <%= link_to "Remove admins", '/remove_admin', :method => :get, class:  "ghost-button"%>
   <% end %>
 </div>
 

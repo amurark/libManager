@@ -1,5 +1,5 @@
-<h1>New Book</h1>
+<%= render(:partial => "./shared/topBar") %>
 
 <%= render 'form' %>
 
-<%= link_to 'Back', books_path %>
+<%= link_to 'Back', books_path, class: "backLink" %>

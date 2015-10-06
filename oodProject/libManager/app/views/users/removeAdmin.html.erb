@@ -8,16 +8,20 @@
       <th>Name</th>
       <th>Email</th>
       <th>User type</th>
+      <th>Remove admin</th>
     </tr>
     </thead>
 
     <tbody>
-    <% @users.reject{|user| user.ty == 0 || user.id == current_user.id}.each do |user| %>
+    <% @users.reject{|user| user.ty == 0 || user.ty == 2 || user.id == current_user.id}.each do |user| %>
         <tr>
           <td><%= user.name %></td>
           <td><%= user.email %></td>
           <td><%= 'admin' if user.ty == 0 || user.ty == 1 %>
             <%= 'patron' if user.ty == 2 %></td>
+          <td>
+            <%= link_to "remove", user, method: :delete, data: { confirm: 'Are you sure you want to remove this admin?' } %>
+          </td>
         </tr>
     <% end %>
     </tbody>

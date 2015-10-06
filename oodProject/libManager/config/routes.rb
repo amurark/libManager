@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :users do
     member do
       get :toggle
+      delete :destroy
     end
   end
   resources :sessions, only: [:new, :create, :destroy]
@@ -19,6 +20,12 @@ Rails.application.routes.draw do
 
   #for complete list of users
   get '/users_all' => 'users#full'
+
+  #for complete list of non-admin users
+  get '/make_admin' => 'users#makeAdmin'
+
+  #for complete list of admins
+  get '/remove_admin' => 'users#removeAdmin'
 
   # get    'login'   => 'sessions#new'
   # post   'login'   => 'sessions#create'

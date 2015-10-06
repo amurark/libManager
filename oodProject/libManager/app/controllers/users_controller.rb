@@ -32,6 +32,16 @@ class UsersController < ApplicationController
     @users = User.all
   end
 
+  #for obtaining complete list of users
+  def makeAdmin
+    @users = User.all
+  end
+
+  #for obtaining complete list of users
+  def removeAdmin
+    @users = User.all
+  end
+
   def toggle
     @user = User.find(params[:id])
     @user.update_attribute(:ty, 1)
@@ -72,11 +82,9 @@ class UsersController < ApplicationController
   # DELETE /users/1
   # DELETE /users/1.json
   def destroy
-    @user.destroy
-    respond_to do |format|
-      format.html { redirect_to users_url, notice: 'User was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    User.find(params[:id]).destroy
+    flash[:success] = "Admin Deleted"
+    redirect_to(:back)
   end
 
   private

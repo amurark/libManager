@@ -10,7 +10,10 @@ class User < ActiveRecord::Base
 
   def alter_data
     self.email = email.downcase
-    #self.ty = 2
+    logger.debug "wassup #{self.ty}"
+    if !self.ty
+      self.ty = 2
+    end
   end
 
   validates :name, :presence => true,
