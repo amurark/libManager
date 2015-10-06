@@ -2,30 +2,45 @@
   <h1 class = "hpHeader">the librarian</h1>
 </div>
 <div class = "bookList">
-    <h1 style = "color:#2061ab;">List of all Books in the Library</h1>
+  <h1 style = "color:#2061ab;">List of all Books in the Library</h1>
 
-    <table cellpadding="0">
-      <thead>
+  <table cellpadding="0">
+    <thead>
+    <tr>
+      <th>Isbn</th>
+      <th>Title</th>
+      <th>Authors</th>
+      <th>Description</th>
+      <th>Status</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <% @books.each do |book| %>
         <tr>
-          <th>Isbn</th>
-          <th>Title</th>
-          <th>Authors</th>
-          <th>Description</th>
-          <th>Status</th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <% @books.each do |book| %>
-          <tr>
-            <td><%= book.ISBN %></td>
-            <td><%= book.Title %></td>
-            <td><%= book.Authors %></td>
-            <td><%= book.Description %></td>
-            <td><%= 'available' if book.Status == false %>
+          <td><%= book.ISBN %></td>
+          <td><%= book.Title %></td>
+          <td><%= book.Authors %></td>
+          <td><%= book.Description %></td>
+          <td><%= 'available' if book.Status == false %>
             <%= 'not available' if book.Status == true %></td>
-          </tr>
-        <% end %>
-      </tbody>
-    </table>
+          <td><%= link_to 'Show details', book %></td>
+          <td><%= link_to 'Edit', edit_book_path(book) %></td>
+          <td><%= link_to 'Delete', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+    <% end %>
+    </tbody>
+  </table>
 </div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<center><%= link_to 'Add a new book to the library', new_book_path, class: "ghost-button2" %>

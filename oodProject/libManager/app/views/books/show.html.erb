@@ -3,19 +3,20 @@
 <p>
   <strong>Book ISBN:</strong>
   <%= @book.ISBN %>
-<br>
+  <br>
   <strong>Book Title:</strong>
   <%= @book.Title %>
-<br>
+  <br>
   <strong>Book Authors:</strong>
   <%= @book.Authors %>
-<br>
+  <br>
   <strong>Book Description :</strong>
   <%= @book.Description %>
-<br>
+  <br>
   <strong>BOOK Status:</strong>
   <%= 'Available' if @book.Status==false %>
   <%= 'Not Available' if @book.Status==true %>
+  <%=link_to (@book.Status ? "Cant Checkout" : "Checkout"), checkout_book_path(@book) if @book.Status==false%>
 </p>
 
 

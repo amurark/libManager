@@ -1,39 +1,48 @@
 class BooksController < ApplicationController
   before_action :set_book, only: [:show, :edit, :update, :destroy]
-   
+
 
   # GET /books
   # GET /books.json
   def index
-   #@books = Book.all
+    #@books = Book.all
   end
 
   #for obtaining complete list of books
   def full
-   @books = Book.all        
+    @books = Book.all
   end
 
   #for displaying book searched via ISBN
   def fullsearch
-   if params[:isbn]
+    if params[:isbn]
       @books = Book.where(:ISBN => params[:isbn])
-   elsif params[:title]
-      @books = Book.where("Title LIKE :title1", { :title1 => "#{params[:title]}%"}) 
-   elsif params[:author]
+    elsif params[:title]
+      @books = Book.where("Title LIKE :title1", { :title1 => "#{params[:title]}%"})
+    elsif params[:author]
       @books = Book.where("Authors LIKE :author1", { :author1 => "#{params[:author]}%"})
-   elsif params[:description]
-      @books = Book.where("Description LIKE :description1", { :description1 => "#{params[:description]}%"})           
-   else
+    elsif params[:description]
+      @books = Book.where("Description LIKE :description1", { :description1 => "#{params[:description]}%"})
+    else
       @books = Book.all
-   end
+    end
   end
 
-    #for obtaining only books that are currently available for checkout
+  #for obtaining only books that are currently available for checkout
   def available
     @books = Book.all
   end
 
-   #for searching books via ISBN
+  # for checkout and toggling book availability status
+  def checkout
+    book = Book.find(params[:id])
+    book.Status = !book.Status
+    book.save
+
+    redirect_to book_path(book)
+  end
+
+  #for searching books via ISBN
   def searchisbn
   end
 
@@ -43,11 +52,11 @@ class BooksController < ApplicationController
 
   #for searching books via Author
   def searchauthor
-  end  
+  end
 
-   #for searching books via description
+  #for searching books via description
   def searchdescription
-  end  
+  end
 
   # GET /books/1
   # GET /books/1.json
@@ -67,8 +76,8 @@ class BooksController < ApplicationController
   # POST /books.json
   def create
     @book = Book.new(book_params)
-    
-     respond_to do |format|
+
+    respond_to do |format|
       if @book.save
         format.html { redirect_to @book, notice: 'Book was successfully created.' }
         format.json { render :show, status: :created, location: @book }
@@ -104,13 +113,13 @@ class BooksController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-     def set_book
-      @book = Book.find(params[:id])
-     end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_book
+    @book = Book.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-     def book_params
-      params.require(:book).permit(:ISBN, :Title, :Authors, :Description, :Status, :Lastuser, :Datetime)
-     end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def book_params
+    params.require(:book).permit(:ISBN, :Title, :Authors, :Description, :Status, :Lastuser, :Datetime)
+  end
 end
