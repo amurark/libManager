@@ -4,7 +4,7 @@
 
 <div class = "formBody">
   <% provide(:title, 'Sign in') %>
-  <h2 class = "formHeader">Sign in as Admin</h2>
+  <h2 class = "formHeader">Sign in as Patron</h2>
   <%= form_for(:session, url: sessions_path) do |f| %>
       <%= render '/shared/session_error_messages' %>
       <%= f.text_field :email, class: "formInput", placeHolder: "email" %>

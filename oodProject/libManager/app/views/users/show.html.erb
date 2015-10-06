@@ -1,8 +1,4 @@
-
-<div class = "hpTopBar">
-  <h1 class = "hpHeader">the librarian</h1>
-  <%= link_to "Sign out", signout_path, method: "delete", class: "userOptions" %>
-</div>
+<%= render(:partial => "./shared/topBar") %>
 
 <% flash.each do |key, value| %>
     <div class="flash alert alert-<%= key %>"><%= value %></div>
@@ -10,7 +6,11 @@
 <div class = "hpBody">
   <%= yield %>
   <h2 class = "userName">Welcome <%= @user.name %></h2>
-  <%= link_to "check out books", '/books', :method => :get, class:  "ghost-button"%>
+  <%= link_to "Check out books", '/books', :method => :get, class:  "ghost-button"%>
+  <% if current_user.ty == 0 %>
+      <%= link_to "Check users", '/users_all', :method => :get, class:  "ghost-button"%>
+      <%= link_to "Add/delete admins", '/users', :method => :get, class:  "ghost-button"%>
+  <% end %>
 </div>
 
 

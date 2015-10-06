@@ -14,14 +14,13 @@ class User < ActiveRecord::Base
   end
 
   validates :name, :presence => true,
-            length: {maximum: 50} #new code.
+            length: {maximum: 50}
 
   validates :email, :presence => true,
             :uniqueness => {:case_sensitive => false},
             :format => {:with => EMAIL_REGEX}
 
-  validates :password, :confirmation => true,
-            :length => {:within => 6..40}
+  validates :password, :length => {:within => 6..40}
 
   validates :password_confirmation, presence: true
 

@@ -16,3 +16,4 @@ Book.create(ISBN: 003, Title: 'OOD Programming', Authors: 'Allen Solly', Descrip
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+

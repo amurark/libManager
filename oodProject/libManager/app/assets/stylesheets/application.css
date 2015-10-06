@@ -119,7 +119,6 @@ input:focus { outline: none; }
     text-align: center;
     /*color: #5a5c60;*/
     color: #a80000;
-    text-shadow: 1px 1px 2px #c5c5c5;
 }
 .formInput {
     -webkit-appearance: none;
@@ -178,7 +177,7 @@ input:focus { outline: none; }
     left: 0;
     right: 0;
     margin: 0 auto;
-    background-color: transparent;
+    background-color: transparent !important;
 }
 .field_with_errors>.formInput {
     border-color: #e93c2c;
@@ -233,19 +232,19 @@ input:focus { outline: none; }
     font-size: 12px;
 }
 .signUpButton {
-    background-color: rgb(92, 184, 92);
-    border-bottom-color: rgb(76, 174, 76);
+    background-color: #1fab78;
+    border-bottom-color: #198a61;
     border-bottom-left-radius: 4px;
     border-bottom-right-radius: 4px;
     border-bottom-style: solid;
     border-bottom-width: 1px;
-    border-left-color: rgb(76, 174, 76);
+    border-left-color: #198a61;
     border-left-style: solid;
     border-left-width: 1px;
-    border-right-color: rgb(76, 174, 76);
+    border-right-color: #198a61;
     border-right-style: solid;
     border-right-width: 1px;
-    border-top-color: rgb(76, 174, 76);
+    border-top-color: #198a61;
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
     border-top-style: solid;
@@ -253,8 +252,8 @@ input:focus { outline: none; }
 }
 .signUpButton:hover {
     color: #fff;
-    background-color: #449d44;
-    border-color: #398439;
+    background-color: #1c9375;
+    border-color: #1c9375;
 }
 
 .loginButton {
@@ -282,19 +281,19 @@ input:focus { outline: none; }
     white-space: nowrap;
     width: 80px;
     text-decoration: none;
-    background-color: #337ab7;
-    border-bottom-color: #2e6da4;
+    background-color: #267fdf;
+    border-bottom-color: #165a99;
     border-bottom-left-radius: 4px;
     border-bottom-right-radius: 4px;
     border-bottom-style: solid;
     border-bottom-width: 1px;
-    border-left-color: #2e6da4;
+    border-left-color: #165a99;
     border-left-style: solid;
     border-left-width: 1px;
-    border-right-color: #2e6da4;
+    border-right-color: #165a99;
     border-right-style: solid;
     border-right-width: 1px;
-    border-top-color: #2e6da4;
+    border-top-color: #165a99;
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
     border-top-style: solid;
@@ -305,8 +304,8 @@ input:focus { outline: none; }
     color: #fff;
 }
 .loginButton:hover {
-    background-color: #286090;
-    border-color: #2e6da4;
+    background-color: #1368de;
+    border-color: #0e4ea6;
 }
 
 .searchButton
@@ -434,16 +433,24 @@ input:focus { outline: none; }
 
 .userOptions
 {
-    color:white;
-    position:relative;
+    color: white;
+    position: relative;
     float: right;
-    height: 100%;
-    line-height: 48px;
-    margin: 0 10px;
-    text-decoration:none;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 20px;
+    text-decoration: none;
+    border-left: 1px solid #DCDCDC;
+    margin: 10px 0;
 }
 .userOptions:visited
 {
     color:white;
+    text-decoration:none;
+}
+.userOptions:hover
+{
+    color: #e1d6d9;
+    border-left: 1px solid #e1d6d9;
     text-decoration:none;
 }

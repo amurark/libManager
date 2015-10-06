@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
-
+  before_action :right_user, only: [:edit, :update, :show]
   # GET /users
   # GET /users.json
   def index
@@ -25,6 +25,11 @@ class UsersController < ApplicationController
 
   def books
     #@books = Book.all
+  end
+
+  #for obtaining complete list of users
+  def full
+    @users = User.all
   end
 
 

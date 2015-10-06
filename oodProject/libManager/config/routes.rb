@@ -10,17 +10,20 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'users#signUp'
 
+  #for complete list of users
+  get '/users_all' => 'users#full'
+
   # get    'login'   => 'sessions#new'
   # post   'login'   => 'sessions#create'
   # delete 'logout'  => 'sessions#destroy'
 
   get '/signup' => 'users#signUp'
-  get '/signin' => 'sessions#new'
+  get '/signin' => 'sessions#signInAs'
+  get '/signin/admin' => 'sessions#new'
+  get '/signin/patron' => 'sessions#newP'
   delete '/signout' => 'sessions#destroy'
 
   get 'books' => 'books#index'
-
-
 
   #for complete list of books
   get 'full' => 'books#full'

@@ -20,4 +20,18 @@ module SessionsHelper
     self.current_user = nil
     cookies.delete(:remember_token)
   end
+
+  def right_user
+    @user = User.find(params[:id])
+    unless @user == current_user
+      go_back
+    end
+  end
+
+  def go_back
+    redirect_to(:back)
+    #Catch exception and redirect to root
+    rescue ActionController::RedirectBackError
+      redirect_to root_path
+  end
 end
