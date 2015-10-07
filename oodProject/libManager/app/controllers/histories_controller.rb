@@ -12,6 +12,11 @@ class HistoriesController < ApplicationController
   def show
   end
 
+  #viweing my history
+  def myhistory
+    @histories = History.all
+  end
+
   # GET /histories/new
   def new
     @history = History.new

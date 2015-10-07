@@ -7,7 +7,6 @@ class CreateBooks < ActiveRecord::Migration
       t.string :Description
       t.boolean :Status
       t.string :Lastuser
-      t.timestamp :Datetime
 
       t.timestamps null: false
 

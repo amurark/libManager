@@ -1,0 +1,35 @@
+<%= render(:partial => "./shared/topBar") %>
+<p id="notice"><%= notice %></p>
+
+<div class = "bookInfo">
+  <div class = "bookDetailHeader">My books to return</div>
+    <% @books.each do |book| %>
+      <% if (book.Lastuser == current_user.email) %>
+        <table class = "bookDetails">
+            <tr>
+              <td><strong>Book ISBN:</strong></td>
+              <td><%= book.ISBN %></td>
+            </tr>
+            <tr>
+              <td><strong>Book Title:</strong></td>
+              <td><%= book.Title %></td>
+            </tr>
+            <tr>
+              <td><strong>Book Authors:</strong></td>
+              <td><%= book.Authors %></td>
+            </tr>
+            <tr>
+              <td><strong>Book Description:</strong></td>
+              <td><%= book.Description %></td>
+            </tr>
+            <tr>
+              <td>
+                <div class = "checkoutButton">
+                  <%=link_to "Return Book", returnit_book_path(book.id)%>
+                </div>
+              </td>
+            </tr>
+        </table>
+      <% end %>
+    <% end %>
+</div>

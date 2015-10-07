@@ -1,0 +1,35 @@
+<%= render(:partial => "./shared/topBar") %>
+<p id="notice"><%= notice %></p>
+
+
+<div class = "bookList">
+  <h1 style = "color:#2061ab;">My history</h1>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Book ISBN</th>
+          <th>Book Title</th>
+          <th>Book Author</th>
+          <th>Checkout time</th>
+          <th>Return time</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @histories.each do |history| %>
+         <% if history.user_email == current_user.email %>
+          <tr>
+            <td><%= history.book_isbn %></td>
+            <td><%= history.book_title %></td>
+            <td><%= history.book_author %></td>
+            <td><%= history.checkout_time %></td>
+            <td><%= history.return_time %></td>
+          </tr>
+         <% end %>
+        <% end %>
+      </tbody>
+    </table>
+</div>
+
+

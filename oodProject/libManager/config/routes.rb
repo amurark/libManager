@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   resources :books do
     member do
       get :checkout
+      get :returnit
     end
   end
   # The priority is based upon order of creation: first created -> highest priority.
@@ -38,6 +39,12 @@ Rails.application.routes.draw do
   delete '/signout' => 'sessions#destroy'
 
   get 'books' => 'books#index'
+
+#for viewing my history
+  get 'myhistory' => 'histories#myhistory'
+
+  #for returning books
+  get 'returnbook' => 'books#returnbook'
 
   #for complete list of books
   get 'full' => 'books#full'

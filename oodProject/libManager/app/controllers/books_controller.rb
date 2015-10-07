@@ -35,11 +35,40 @@ class BooksController < ApplicationController
 
   # for checkout and toggling book availability status
   def checkout
-    book = Book.find(params[:id])
-    book.Status = !book.Status
-    book.save
+      flag = 0 
+      book = Book.find(params[:id])
+      @books=Book.all
+      @books.each do|book|
+       if (book.Lastuser == current_user.email)       
+         flag = 1 
+         flash[:notice] = 'You have another book checked out already' 
+       end
+      end
+      if flag == 0   
+        book = Book.find(params[:id])
+        book.Status = !book.Status 
+        book.Lastuser = current_user.email
+        book.save
+        History.create(:book_isbn => book.ISBN, :user_email => current_user.email, :book_title => book.Title, :book_author => book.Authors, :checkout_time => DateTime.now)
+        flash[:notice] = 'Book was sucessfully checked out'           
+      end 
+     redirect_to book_path(book)      
+  end
 
-    redirect_to book_path(book)
+  # for displaying books to return
+  def returnbook
+    @books = Book.all       
+  end
+
+  # for return and toggling book availability status
+  def returnit
+    book = Book.find(params[:id])    
+    book.Status = !book.Status 
+    book.Lastuser = nil
+    book.save
+    History.where(:book_isbn => book.ISBN).where(:return_time => nil).update_all( :return_time => DateTime.now)
+    flash[:notice] = 'Book was sucessfully returned'
+   redirect_to returnbook_path      
   end
 
   #for searching books via ISBN

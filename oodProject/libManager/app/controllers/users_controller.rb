@@ -16,13 +16,14 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       sign_in @user
-      flash[:success] = "Welcome to the Lib-ra-ry"
+      flash[:success] = "Welcome to the Library"
       redirect_to @user
     else
       render action: "signUp"
     end
   end
 
+  #for displaying books home page
   def books
     #@books = Book.all
   end
@@ -46,8 +47,8 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @user.update_attribute(:ty, 1)
     @user.save
-
     redirect_to user_path(@user)
+    flash[:notice] = 'Successfully made as admin.'
   end
 
 
@@ -83,7 +84,7 @@ class UsersController < ApplicationController
   # DELETE /users/1.json
   def destroy
     User.find(params[:id]).destroy
-    flash[:success] = "Admin Deleted"
+    flash[:notice] = "Admin successfully deleted"
     redirect_to(:back)
   end
 

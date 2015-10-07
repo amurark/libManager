@@ -20,7 +20,6 @@ ActiveRecord::Schema.define(version: 20151007051027) do
     t.string   "Description", limit: 255
     t.boolean  "Status",                  default: false, null: false
     t.string   "Lastuser",    limit: 255
-    t.datetime "Datetime"
     t.datetime "created_at",                              null: false
     t.datetime "updated_at",                              null: false
   end
@@ -30,6 +29,8 @@ ActiveRecord::Schema.define(version: 20151007051027) do
   create_table "histories", force: :cascade do |t|
     t.integer  "book_isbn",     limit: 4
     t.string   "user_email",    limit: 255
+    t.string   "book_title",    limit: 255
+    t.string   "book_author",   limit: 255
     t.datetime "checkout_time"
     t.datetime "return_time"
     t.datetime "created_at",                null: false
