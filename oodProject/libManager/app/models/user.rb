@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
 
   def alter_data
     self.email = email.downcase
-    logger.debug "wassup #{self.ty}"
+    logger.debug "#{self.ty}"
     if !self.ty
       self.ty = 2
     end
