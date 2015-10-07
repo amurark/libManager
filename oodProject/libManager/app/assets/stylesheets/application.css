@@ -551,6 +551,3 @@ tr a:active, tr a:hover, tr a:visited {
     top: 55px;
     left: 70px;
 }
-table td:first-child {
-    text-align: center !important;
-}
