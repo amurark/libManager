@@ -1,6 +1,4 @@
-<div class = "hpTopBar">
-  <h1 class = "hpHeader">the librarian</h1>
-</div>
+<%= render(:partial => "./shared/topBar") %>
 <p id="notice"><%= notice %></p>
 <div class = "bookList">
 
@@ -13,7 +11,11 @@
           <th>Title</th>
           <th>Authors</th>
           <th>Description</th>
-          <th>Status</th>
+          <th>Details</th>
+          <% if current_user.ty == 0 || current_user.ty == 1 %>
+              <th>Edit</th>
+              <th>Delete</th>
+          <% end %>
         </tr>
       </thead>
 
@@ -24,7 +26,17 @@
             <td><%= book.Title %></td>
             <td><%= book.Authors %></td>
             <td><%= book.Description %></td>
-            <td><%= 'Available' %></td>
+            <td><%= link_to '<i class="fa fa-book table-fonts corn-flower-blue-color"></i>'.html_safe, book %></td>
+            <% if current_user.ty == 0 || current_user.ty == 1 %>
+                <td>
+                  <%= link_to '<i class="fa fa-pencil table-fonts cadet-blue-color"></i>'.html_safe, edit_book_path(book)%>
+                </td>
+                <td>
+                  <% if book.Status == false %>
+                      <%= link_to '<i class="fa fa-trash-o table-fonts brown-color"></i>'.html_safe, book, method: :delete, data: { confirm: 'Are you sure?' } %>
+                  <% end %>
+                </td>
+            <% end %>
           </tr>
        <% end %>
       </tbody>
