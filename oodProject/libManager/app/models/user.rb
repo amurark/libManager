@@ -12,7 +12,7 @@ class User < ActiveRecord::Base
     self.email = email.downcase
     logger.debug "#{self.ty}"
     if !self.ty
-      self.ty = 2
+      self.ty = 0
     end
   end
 
