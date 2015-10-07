@@ -1,17 +1,7 @@
 <%= form_for(@book) do |f| %>
   <div class = "formBody">
     <h1 class = "formHeader">Add a book</h1>
-    <% if @book.errors.any? %>
-        <div id="error_explanation">
-          <h2><%= pluralize(@book.errors.count, "error") %> Prohibited this book from being saved:</h2>
-
-          <ul>
-          <% @book.errors.full_messages.each do |message| %>
-            <li><%= message %></li>
-          <% end %>
-          </ul>
-        </div>
-    <% end %>
+    <%= render '/shared/error_messages_books' %>
     <%= f.text_field :ISBN, class: "formInput", placeholder: "ISBN" %>
     <%= f.text_field :Title, class: "formInput", placeholder: "Title" %>
     <%= f.text_field :Authors, class: "formInput", placeholder: "Authors" %>

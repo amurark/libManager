@@ -1,23 +1,36 @@
+<%= render(:partial => "./shared/topBar") %>
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Book ISBN:</strong>
-  <%= @book.ISBN %>
-  <br>
-  <strong>Book Title:</strong>
-  <%= @book.Title %>
-  <br>
-  <strong>Book Authors:</strong>
-  <%= @book.Authors %>
-  <br>
-  <strong>Book Description :</strong>
-  <%= @book.Description %>
-  <br>
-  <strong>BOOK Status:</strong>
-  <%= 'Available' if @book.Status==false %>
-  <%= 'Not Available' if @book.Status==true %>
-  <%=link_to (@book.Status ? "Cant Checkout" : "Checkout"), checkout_book_path(@book) if @book.Status==false%>
-</p>
+<div class = "bookInfo">
+  <div class = "bookDetailHeader">Book Details</div>
+    <table class = "bookDetails">
+      <tr>
+        <td><strong>Book ISBN:</strong></td>
+        <td><%= @book.ISBN %></td>
+      </tr>
+      <tr>
+        <td><strong>Book Title:</strong></td>
+        <td><%= @book.Title %></td>
+      </tr>
+      <tr>
+        <td><strong>Book Authors:</strong></td>
+        <td><%= @book.Authors %></td>
+      </tr>
+      <tr>
+        <td><strong>Book Description:</strong></td>
+        <td><%= @book.Description %></td>
+      </tr>
+      <tr>
+        <td><strong>Book Status:</strong></td>
+        <td><%= 'Available' if @book.Status==false %>
+          <%= 'Not Available' if @book.Status==true %>
+          <div class = "checkoutButton"><%=link_to (@book.Status ? "Cant Checkout" : "Checkout"), checkout_book_path(@book) if @book.Status==false%></div>
+        </td>
+      </tr>
+    </table>
+</div>
+
+
 
 
 

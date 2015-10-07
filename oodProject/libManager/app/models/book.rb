@@ -1,3 +1,4 @@
 class Book < ActiveRecord::Base
-   self.primary_key = "ISBN"
+   validates :ISBN, :presence => true,
+                    :uniqueness => {:case_sensitive => false}
 end

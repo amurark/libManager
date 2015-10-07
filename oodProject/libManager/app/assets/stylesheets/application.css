@@ -20,6 +20,8 @@ body
     margin: 0;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
+
+
 input:focus { outline: none; }
 .hpTopBar
 {
@@ -431,7 +433,7 @@ input:focus { outline: none; }
     font-weight: bold;
 }
 
-.userOptions
+a.userOptions
 {
     color: white;
     position: relative;
@@ -443,12 +445,12 @@ input:focus { outline: none; }
     border-left: 1px solid #DCDCDC;
     margin: 10px 0;
 }
-.userOptions:visited
+a.userOptions:visited
 {
     color:white;
     text-decoration:none;
 }
-.userOptions:hover
+a.userOptions:hover
 {
     color: #e1d6d9;
     border-left: 1px solid #e1d6d9;
@@ -459,4 +461,83 @@ tr a:active, tr a:hover, tr a:visited {
     color: #666 !important;
     background:transparent !important;
     text-decoration: underline !important;
+}
+
+.bookInfo
+{
+    position:absolute;
+    top:50px;
+    bottom:0;
+    width:100%;
+    padding:50px;
+    box-sizing: border-box;
+}
+
+.bookDetailHeader {
+    padding-bottom: 15px;
+    padding-left: 20px;
+    font-size: 18px;
+    color: #3aab90;
+}
+.bookDetails {
+    margin:0;
+    background: transparent;
+}
+.bookDetails td {
+    background: transparent;
+    text-align: left;
+}
+.bookDetails tr:hover td{
+    background: transparent;
+}
+.checkoutButton {
+    color: #fff;
+    border: 1px solid rgb(20, 169, 115);
+    box-shadow: none;
+    display: inline-block;
+    padding: 2px 5px;
+}
+.checkoutButton:hover {
+    box-shadow: 0px 1px 1px 1px rgba(20, 169, 115, 0.2);
+}
+.checkoutButton a {
+    font-weight: 400 !important;
+    color: #1fab78 !important;
+    font-size: 10px;
+    text-decoration:none !important;
+}
+.checkoutButton>a:visited{
+    color: #1fab78 !important;
+    text-decoration:none !important;
+}
+.checkoutButton>a:hover{
+    color: #1fab78 !important;
+    text-decoration:none !important;
+}
+.checkoutButton>a:active{
+    color: #1fab78 !important;
+    text-decoration:none !important;
+}
+
+.table-fonts {
+    font-size: 15px !important;
+}
+.corn-flower-blue-color:hover {
+    color: cornflowerblue;
+}
+.cadet-blue-color:hover {
+    color: cadetblue;
+}
+.brown-color:hover {
+    color: brown;
+}
+
+.topOptions {
+    position: relative;
+    top: 120px;
+    text-align: center;
+}
+.topOptions a:hover {
+    color: #000 !important;
+    background:transparent !important;
 }
