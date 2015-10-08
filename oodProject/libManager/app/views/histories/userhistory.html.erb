@@ -1,0 +1,12 @@
+<%= render(:partial => "./shared/topBar") %>
+<p id="notice"><%= notice %></p>
+<div class = "bookList">
+  <h1 style = "color:#3aab90;">Enter user email ID to view complete user history</h1>
+  <%= form_tag ('/fullhistoryuser'), method: "get" do %>
+      <%= text_field_tag :email, params[:email], class: "formInput", placeholder: "Enter email ID:" %>
+      <%= submit_tag "Search", :name => nil, class: "searchButton seaGreenButton" %>
+  <% end %>
+</div>
+
+
+

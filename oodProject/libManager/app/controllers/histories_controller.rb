@@ -17,6 +17,14 @@ class HistoriesController < ApplicationController
     @histories = History.all
   end
 
+  def bookhistory
+    @histories = History.all
+  end
+
+  def userhistory
+    @histories = History.all
+  end
+
   # GET /histories/new
   def new
     @history = History.new
@@ -24,6 +32,17 @@ class HistoriesController < ApplicationController
 
   # GET /histories/1/edit
   def edit
+  end
+
+  #for displaying history results searched by admin
+  def fullhistory
+    if params[:isbn]
+      @histories = History.where(:book_isbn => params[:isbn])
+    elsif params[:email]
+      @histories = History.where(:user_email => params[:email])
+    else
+      @histories = History.all
+    end
   end
 
   # POST /histories

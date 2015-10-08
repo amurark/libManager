@@ -589,3 +589,7 @@ input:disabled {
     border: 1px solid #d3d3d3;
     color:#a8a8a8;
 }
+.checkoutButton a:hover, a:visited, a:active{
+    color: rgb(20, 169, 115);
+    background: transparent;
+}

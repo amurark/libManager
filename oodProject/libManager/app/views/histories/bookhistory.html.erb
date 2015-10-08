@@ -1,0 +1,12 @@
+<%= render(:partial => "./shared/topBar") %>
+<p id="notice"><%= notice %></p>
+<div class = "bookList">
+  <h1 style = "color:#3aab90;">Enter book ISBN to view complete book history</h1>
+  <%= form_tag ('/fullhistorybook'), method: "get" do %>
+      <%= text_field_tag :isbn, params[:isbn], class: "formInput", placeholder: "Enter ISBN:" %>
+      <%= submit_tag "Search", :name => nil, class: "searchButton seaGreenButton" %>
+  <% end %>
+</div>
+
+
+

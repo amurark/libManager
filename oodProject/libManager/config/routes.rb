@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :notifications
   resources :histories
   resources :users do
     member do
@@ -13,6 +14,7 @@ Rails.application.routes.draw do
       get :checkout
       get :checkoutad
       get :returnit
+      get :notify
     end
   end
   # The priority is based upon order of creation: first created -> highest priority.
@@ -43,6 +45,18 @@ Rails.application.routes.draw do
 
 #for viewing my history
   get 'myhistory' => 'histories#myhistory'
+
+  # for admin to view book history
+  get 'bookhistory' => 'histories#bookhistory'
+
+  # for admin to view user history
+  get 'userhistory' => 'histories#userhistory'
+
+  #for displaying books when admin seraches book history
+  get 'fullhistorybook' => 'histories#fullhistory'
+
+  #for displaying user when admin seraches user history
+  get 'fullhistoryuser' => 'histories#fullhistory'
 
   #for returning books
   get 'returnbook' => 'books#returnbook'

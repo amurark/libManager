@@ -10,6 +10,8 @@
   <% if current_user.ty == 0 || current_user.ty == 1 %>
       <%= link_to "Check users", '/users_all', :method => :get, class:  "ghost-button"%>
       <%= link_to "Make admins", '/make_admin', :method => :get, class:  "ghost-button"%>
+      <%= link_to "View complete history of a book", '/bookhistory', :method => :get, class: "ghost-button" %>
+      <%= link_to "View complete history of a user", '/userhistory', :method => :get, class: "ghost-button" %>
   <% end %>
   <%= link_to "Return currently checked out books", '/returnbook', :method => :get, class:  "ghost-button"%>
   <%= link_to "View my checkout history", '/myhistory', :method => :get, class:  "ghost-button"%>

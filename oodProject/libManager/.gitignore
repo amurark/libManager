@@ -14,3 +14,4 @@
 
 #ignore config files
 /config/database.yml
+/config/app_environment_variables.rb

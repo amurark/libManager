@@ -36,9 +36,10 @@
         <td><%= 'Available' if @book.Status==false %>
           <%= 'Not Available' if @book.Status==true %>
           <div class = "checkoutButton">
-	  	<%=link_to (@book.Status ? "Cant Checkout" : "Checkout"), checkout_book_path(@book) if (@book.Status==false)%>
-		<%=link_to (@book.Status ? "Return" : " Can't Return"), returnit_book_path(@book) if (@book.Lastuser == current_user.email)%> 
-	  </div>
+            <%=link_to (@book.Status ? "Cant Checkout" : "Checkout"), checkout_book_path(@book) if (@book.Status==false)%>
+            <%=link_to (@book.Status ? "Return" : " Can't Return"), returnit_book_path(@book) if (@book.Lastuser == current_user.email)%>
+            <%=link_to (@book.Status ? "Notify" : ""), notify_book_path(@book) if (@book.Lastuser != current_user.email)%>
+          </div>
 	  
         </td>
       </tr>

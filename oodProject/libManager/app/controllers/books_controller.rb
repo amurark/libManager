@@ -56,6 +56,32 @@ class BooksController < ApplicationController
      redirect_to book_path(book)      
   end
 
+  # for notifying
+  def notify
+    flag4 = false
+    @book = Book.find(params[:id])
+    @user = current_user
+
+    @notifications = Notification.all
+    @notifications.each do |notif|
+      if notif.ISBN == @book.ISBN
+        if notif.email = @user.email
+          flag4 = true
+          break
+        end
+      end
+    end
+    if !flag4
+      Notification.create(:ISBN => @book.ISBN, :email => @user.email)
+      redirect_to book_path(@book)
+      flash[:notice] = 'You will be notified via email when the book becomes available.'
+    else
+      flash[:notice] = 'You already subscribed to get a notification for this book.'
+      redirect_to book_path(@book)
+    end
+
+  end
+
   # for checkout  on behalf of user and toggling book availability status
   def checkoutad
       flag = 0 
@@ -96,13 +122,28 @@ class BooksController < ApplicationController
 
   # for return and toggling book availability status
   def returnit
-    book = Book.find(params[:id])    
+    book = Book.find(params[:id])
+    notify_subscribers(book)
     book.Status = !book.Status 
     book.Lastuser = nil
     book.save
     History.where(:book_isbn => book.ISBN).where(:return_time => nil).update_all( :return_time => DateTime.now)
     flash[:notice] = 'Book was sucessfully returned'
-   redirect_to returnbook_path      
+   redirect_to returnbook_path
+  end
+
+  def notify_subscribers(book)
+    @notifications = Notification.all
+    @notifications.each do |notif|
+      if notif.ISBN == book.ISBN
+        @user = User.find_by_email(notif.email)
+        @book = Book.find_by_ISBN(notif.ISBN)
+        #logger.debug "wassup #{@user}"
+        #logger.debug "wassup #{@book.ISBN}"
+        UserMailer.notification(@user, @book).deliver_now
+        notif.destroy
+      end
+    end
   end
 
   #for searching books via ISBN
