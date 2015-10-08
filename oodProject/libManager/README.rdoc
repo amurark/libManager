@@ -10,24 +10,24 @@ The link lands to the default home page.
 
 Preconfigured admin details:
 
-**name**: admin
+**name:** admin
 
-**email**: admin@admin.com
+**email:** admin@admin.com
 
-**password**: knock-knock
+**password:** knock-knock
 
-Features implemented:
+###Features implemented:
 
-Admins:
-1. Login with email and password
+####Admins:
+**1. Login with email and password**
   
 On home page click on Sign In, then click on "Enter as Admin". Sign in by the credentials given above. 
 
-2. Edit his/her profile:
+**2. Edit his/her profile:**
 
 Profile can be updated by clicking on the profile button.
 
-3. Manage admins
+**3. Manage admins**
 
 a. Create new admins
 An admin can promote the existing library member to admin status. Select the option "Make Admins". The user list would be generated. Promote any user to be admin by clicking on the admin button on the rightmost column.
@@ -35,7 +35,7 @@ An admin can promote the existing library member to admin status. Select the opt
 b. Delete admins
 An admin can delete other admins by clicking on the Delete Admins button. Click on "Delete Admins", a table will show up. From the rightmost column, selecting delete will delete an admin. He/She cannot delete himself/herself and the preconfigured admin.
 
-4. Managing books
+**4. Managing books**
 
 a. Add a book to the system
 An admin can add a book. On the home page click on Check out Books. Then click on "View Complete list of Books". Then on the bottom of the table, select on "Add a new Book to the Library"
@@ -58,11 +58,11 @@ Follow step d. Edit option next to the details will allow to edit book details.
 f. Delete a book
 Follow step d. Delete option is next to the edit option. 
 
-5. Manage library members
+**5. Manage library members**
 
 Click on "check users" option for the admin home page. There you can View the complete list of users. There user can be deleted.
 
-Library Users
+####Library Users
 1. Sign up is available on the application home page. 
 2. When a user is signed in, the user can perform the following three tasks. 
 
@@ -77,7 +77,7 @@ Books can be searched by
 
 
 
-Use cases 
+####Use cases 
 
 a) If a user is deleted, the checkout history is also deleted.
 
