@@ -20,6 +20,17 @@
         <td><strong>Book Description:</strong></td>
         <td><%= @book.Description %></td>
       </tr>
+      <% if current_user.ty == 0 || current_user.ty == 1 %>
+          <tr>
+            <td><strong>Current Book holder:</strong></td>
+            <% if @book.Lastuser != "null" %>
+                <td><%= @book.Lastuser%></td>
+            <% end %>
+            <% if @book.Lastuser == "null" %>
+                <td><% 'None' %></td>
+            <% end %>
+          </tr>
+      <% end %>
       <tr>
         <td><strong>Book Status:</strong></td>
         <td><%= 'Available' if @book.Status==false %>

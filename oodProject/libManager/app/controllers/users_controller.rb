@@ -97,9 +97,27 @@ class UsersController < ApplicationController
   # DELETE /users/1
   # DELETE /users/1.json
   def destroy
-    User.find(params[:id]).destroy
-    flash[:notice] = "Admin successfully deleted"
-    redirect_to(:back)
+    flag1 = 0
+    @books = Book.all
+    @books.each do |book|
+      if (book.Lastuser == User.find(params[:id]).email)
+        flag1 = 1
+        flash[:notice] = "User has a book checked out, can't delete."
+        redirect_to "/users_all"
+        break
+      end
+    end
+    if flag1 == 0
+      if User.find(params[:id]).ty != 0
+        User.find(params[:id]).destroy
+        flash[:notice] = "Member successfully deleted"
+        redirect_to "/users_all"
+      else
+        flash[:notice] = "Cant delete the preconfigured admin."
+        redirect_to "/users_all"
+      end
+
+    end
   end
 
   private

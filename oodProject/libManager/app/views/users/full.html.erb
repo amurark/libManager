@@ -1,4 +1,5 @@
 <%= render(:partial => "./shared/topBar") %>
+<p id="notice"><%= notice %></p>
 <div class = "bookList">
   <h1 style = "color:#2061ab;">List of Library Members</h1>
 
@@ -8,6 +9,7 @@
       <th>Name</th>
       <th>Email</th>
       <th>User type</th>
+      <th>Remove members</th>
     </tr>
     </thead>
 
@@ -17,7 +19,11 @@
           <td><%= user.name %></td>
           <td><%= user.email %></td>
           <td><%= 'admin' if user.ty == 0 || user.ty == 1 %>
-            <%= 'patron' if user.ty == 2 %></td>
+            <%= 'patron' if user.ty == 2 %>
+          </td>
+          <td>
+            <%= link_to '<i class="fa fa-trash-o table-fonts brown-color"></i>'.html_safe, user, method: :delete, data: { confirm: 'Are you sure you want to remove this library member?' } %>
+          </td>
         </tr>
     <% end %>
     </tbody>

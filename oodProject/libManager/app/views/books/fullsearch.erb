@@ -14,6 +14,7 @@
           <th>Status</th>
           <th>Details</th>
           <% if current_user.ty == 0 || current_user.ty == 1 %>
+              <th>Current book holder</th>
               <th>Edit</th>
               <th>Delete</th>
           <% end %>
@@ -31,6 +32,12 @@
             <%= 'not available' if book.Status == true %></td>
             <td><%= link_to '<i class="fa fa-book table-fonts corn-flower-blue-color"></i>'.html_safe, book %></td>
             <% if current_user.ty == 0 || current_user.ty == 1 %>
+                <% if book.Lastuser != "null" %>
+                    <td><%= book.Lastuser%></td>
+                <% end %>
+                <% if book.Lastuser == "null" %>
+                    <td><% 'None' %></td>
+                <% end %>
                 <td>
                   <%= link_to '<i class="fa fa-pencil table-fonts cadet-blue-color"></i>'.html_safe, edit_book_path(book)%>
                 </td>

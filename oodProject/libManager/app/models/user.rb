@@ -3,6 +3,7 @@ class User < ActiveRecord::Base
   #attr_accessor :name, :email #new line
   cattr_accessor :current_user
   has_secure_password
+  attr_accessor :flag1
   EMAIL_REGEX = /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]+)\z/i
 
   before_save :alter_data

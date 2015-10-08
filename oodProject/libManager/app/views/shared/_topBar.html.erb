@@ -1,6 +1,6 @@
 <div class = "hpTopBar">
   <div class = "hpHeader"></div>
   <%= link_to 'sign out', signout_path, method: "delete", class: "userOptions" %>
-  <%= link_to "profile", edit_user_path(@user), class: "userOptions" %>
+  <%= link_to "profile", edit_user_path(current_user.id), class: "userOptions" %>
   <%= link_to "home", current_user, class: "userOptions" %>
 </div>
