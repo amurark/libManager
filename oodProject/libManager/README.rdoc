@@ -1,6 +1,6 @@
 == README
 
-Library Management System
+==== Library Management System
 
 Deployment : The application is deployed on Heroku. The link for accessing the application is:
 
