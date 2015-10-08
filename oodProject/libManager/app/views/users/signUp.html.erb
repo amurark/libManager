@@ -3,7 +3,7 @@
   <div class = "hpHeader"></div>
   <a href = "/signin" class = "button loginButton">Sign In</a>
 </div>
-
+<p id="notice"><%= notice %></p>
 <div class = "formBody">
   <% provide(:title, 'Sign up') %>
   <h1 class = "formHeader">Sign up</h1>
@@ -17,6 +17,6 @@
 
       <%= f.password_field :password_confirmation, class: "formInput", placeholder: "confirm password" %>
 
-      <%= f.submit "Create my account", class: "button signUpButton" %>
+      <%= f.submit "Edit Profile", class: "button signUpButton" %>
   <% end %>
 </div>

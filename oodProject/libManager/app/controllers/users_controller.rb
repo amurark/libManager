@@ -51,6 +51,19 @@ class UsersController < ApplicationController
     flash[:notice] = 'Successfully made as admin.'
   end
 
+  def profile
+    @user = current_user
+    respond_to do |format|
+      if @user.update(user_params_for_edit)
+        format.html { redirect_to @user, notice: 'User was successfully edited.' }
+        format.json { render :show, status: :ok, location: @user }
+      else
+        format.html { render :profile }
+        format.json { render json: @user.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
 
 
   def show
@@ -64,6 +77,7 @@ class UsersController < ApplicationController
 
   # GET /users/1/edit
   def edit
+    @user = User.find(params[:id])
   end
 
   # PATCH/PUT /users/1
@@ -71,7 +85,7 @@ class UsersController < ApplicationController
   def update
     respond_to do |format|
       if @user.update(user_params)
-        format.html { redirect_to @user, notice: 'User was successfully updated.' }
+        format.html { redirect_to @user, notice: 'User was successfully updated. Please sign in again' }
         format.json { render :show, status: :ok, location: @user }
       else
         format.html { render :edit }
@@ -95,6 +109,10 @@ class UsersController < ApplicationController
   end
 
   def user_params
-    params.require(:user).permit(:email, :password, :password_confirmation, :name, :ty)
+    params.require(:user).permit(:email, :password, :password_confirmation, :name, :ty, :age)
+  end
+
+  def user_params_for_edit
+    params.require(:user).permit(:password, :password_confirmation, :name)
   end
 end

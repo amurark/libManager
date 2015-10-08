@@ -76,8 +76,8 @@ Rails.application.routes.draw do
   #for displaying books searched via Description
   get 'fullsearchdescription' => 'books#fullsearch'
 
-
-
+  #For editing user profile.
+  get 'profile' => 'users#profile'
 
   #get 'static_pages/signUp'
   # get 'login' => 'static_pages#login'

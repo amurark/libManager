@@ -551,3 +551,21 @@ tr a:active, tr a:hover, tr a:visited {
     top: 55px;
     left: 70px;
 }
+#errorLogin
+{
+    position: absolute;
+    top: 55px;
+    width:100%;
+    color:red;
+    text-align: center;
+}
+.noBackground
+{
+    background: transparent;
+    border: 1px solid transparent;
+}
+
+input:disabled {
+    border: 1px solid #d3d3d3;
+    color:#a8a8a8;
+}

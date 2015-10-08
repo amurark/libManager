@@ -1,5 +1,5 @@
 <%= render(:partial => "./shared/topBar") %>
-<%= link_to 'Show', @user %> | <%= link_to 'Back', users_path %>
+
 <%= form_for(@user) do |f| %>
     <div class = "formBody noBackground">
       <h1 class = "formHeader">Edit profile</h1>
@@ -7,7 +7,6 @@
       <%= f.text_field :name, class: "formInput", placeholder: "Name" %>
       <%= f.password_field :password, class: "formInput", placeholder: "password" %>
       <%= f.password_field :password_confirmation, class: "formInput", placeholder: "confirm password" %>
-      <%= f.number_field :age, class: "formInput", placeholder: "Age" %>
       <%= f.submit "Save", class: "button signUpButton blueButton" %>
     </div>
 <% end %>
