@@ -19,56 +19,62 @@ Preconfigured admin details:
 ### Features implemented:
 
 #### Admins:
-*1. Login with email and password*
+---------------------
+
+*1.* Login with email and password
+--------------------------------------
   
-On home page click on Sign In, then click on "Enter as Admin". Sign in by the credentials given above. 
+        On home page click on Sign In, then click on "Enter as Admin". Sign in by the credentials given above. 
 
-*2. Edit his/her profile:*
+*2.* Edit his/her profile:
+----------------------------
 
-Profile can be updated by clicking on the profile button.
+        Profile can be updated by clicking on the profile button.
 
 *3. Manage admins*
+--------------------
 
 a. Create new admins
-An admin can promote the existing library member to admin status. Select the option "Make Admins". The user list would be generated. Promote any user to admin level by clicking on the admin button in the rightmost column.
+        An admin can promote the existing library member to admin status. Select the option "Make Admins". The user         list would be generated. Promote any user to admin level by clicking on the admin button in the rightmost           column.
 
-*4. Managing books*
+*4.* Managing books
+----------------------
 
-*a. Add a book to the system*
-An admin can add a book. On the home page click on Check out Books. Then click on "View Complete list of Books". Then on the bottom of the table, select on "Add a new Book to the Library"
-Enter the details and submit the form, the book will be added.
+*a.* Add a book to the system
+        An admin can add a book. On the home page click on Check out Books. Then click on "View Complete list of            Books". Then on the bottom of the table, select on "Add a new Book to the Library"
+        Enter the details and submit the form, the book will be added.
 
-*b. Checkout/return a book on behalf of library member*
-On the home page, click on "check out books". Then click on "View complete list of books". When the list opens, click on the "details" button for the book, interested in. The admin can checkout an available book for another user by entering the user's email id. If the email id is valid, then the book will be checked out.
-The admin can return the book by clicking on "return the book" for the book which is to be returned.
+*b.* Checkout/return a book on behalf of library member
+        On the home page, click on "check out books". Then click on "View complete list of books". When the list            opens, click on the "details" button for the book, interested in. The admin can checkout an available book          for another user by entering the user's email id. If the email id is valid, then the book will be checked           out.
+        The admin can return the book by clicking on "return the book" for the book which is to be returned.
 
-*c. View the list of all books*
-On the home page, click on "check out books". Then click on "View complete list of books".
+*c.* View the list of all books
+        On the home page, click on "check out books". Then click on "View complete list of books".
 
-*d. View the details of a book.*
-On the home page, click on "check out books". Then click on "View complete list of books". When the list opens, click on the the details button for the book . 
-On the same page, you can see which user currently has the book.
+*d.* View the details of a book.
+        On the home page, click on "check out books". Then click on "View complete list of books". When the list            opens, click on the the details button for the book . 
+        On the same page, you can see which user currently has the book.
 
-*e. Edit the details of a book*
-Follow step d. Edit option next to the details will allow to edit book details.
+*e.* Edit the details of a book
+        Follow step d. Edit option next to the details will allow to edit book details.
 
-*f. Delete a book*
-Follow step d. Delete option is next to the edit option. 
+*f.* Delete a book
+        Follow step d. Delete option is next to the edit option. 
 
-*5. Manage library members*
+*5.* Manage library members
 
-Click on "check users" option at the admin home page. There you can view the complete list of users. Users/admin can be deleted.
+        Click on "check users" option at the admin home page. There you can view the complete list of users. Users          /admin can be deleted.
 
-*6. View Entire checkout history for books*
+*6.* View Entire checkout history for books
 
-As an admin, once logged in, click on 'View Complete history of a book' in the homepage. Enter the ISBN of the book, you want to check the histoy for. Submit and view the results
+        As an admin, once logged in, click on 'View Complete history of a book' in the homepage. Enter the ISBN of          the book, you want to check the histoy for. Submit and view the results
 
-*6. View Entire checkout history for users*
+*7.* View Entire checkout history for users
 
-As an admin, once logged in, click on 'View Complete history of a user' in the homepage. Enter the email of the user you want to check the histoy for. Submit and view the results
+        As an admin, once logged in, click on 'View Complete history of a user' in the homepage. Enter the email of         the user you want to check the histoy for. Submit and view the results
 
 
-*Library Users*
+Library Users
 ------------------
         1. Sign up is available on the application home page. 
         2. When a user is signed in, the user can perform the following three tasks. 
@@ -84,7 +90,7 @@ As an admin, once logged in, click on 'View Complete history of a user' in the h
 
 
 
-*Use cases*
+Use cases
 ------------
 
     a) If a user is deleted, the checkout history is also deleted.
@@ -96,7 +102,7 @@ As an admin, once logged in, click on 'View Complete history of a user' in the h
     d) An admin cannot delete a user/admin who has checked out a book.
 
 
-*Bonus functionality*
+**Bonus functionality**
 ----------------------
 
     1. As a user, go to any checked-out book and check the details of the book. Click on the norify button to get an     email when the book is returned and available.
