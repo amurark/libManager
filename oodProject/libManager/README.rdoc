@@ -31,7 +31,7 @@ Preconfigured admin details:
 
         Profile can be updated by clicking on the profile button.
 
-*3. Manage admins*
+*3.* Manage admins
 --------------------
 
 a. Create new admins
@@ -62,14 +62,17 @@ a. Create new admins
         Follow step d. Delete option is next to the edit option. 
 
 *5.* Manage library members
+-----------------------------
 
         Click on "check users" option at the admin home page. There you can view the complete list of users. Users          /admin can be deleted.
 
 *6.* View Entire checkout history for books
+--------------------------------------------
 
         As an admin, once logged in, click on 'View Complete history of a book' in the homepage. Enter the ISBN of          the book, you want to check the histoy for. Submit and view the results
 
 *7.* View Entire checkout history for users
+----------------------------------------------
 
         As an admin, once logged in, click on 'View Complete history of a user' in the homepage. Enter the email of         the user you want to check the histoy for. Submit and view the results
 
