@@ -571,7 +571,7 @@ tr a:active, tr a:hover, tr a:visited {
     color:red;
     text-align: center;
 }
-#errorLogin
+.errorLogin
 {
     position: absolute;
     top: 55px;
