@@ -83,7 +83,7 @@ Books can be searched by ISBN, Title, Author or by Description, in the "check ou
 
 
 
-Use cases 
+# Use cases 
 ---------
 
     a) If a user is deleted, the checkout history is also deleted.
