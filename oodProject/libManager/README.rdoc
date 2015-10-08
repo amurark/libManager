@@ -1,6 +1,6 @@
 == README
 
-Library Management System
+#Library Management System
 
 Deployment : The application is deployed on Heroku. The link for accessing the application is:
 
@@ -10,9 +10,11 @@ The link lands to the default home page.
 
 Preconfigured admin details:
 
-name: admin
-email: admin@admin.com
-password: knock-knock
+**name**: admin
+
+**email**: admin@admin.com
+
+**password**: knock-knock
 
 Features implemented:
 
