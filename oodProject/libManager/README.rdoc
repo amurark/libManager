@@ -10,15 +10,15 @@ The link lands to the default home page.
 
 Preconfigured admin details:
 
-**name:** admin
+*name:* admin
 
 **email:** admin@admin.com
 
 **password:** knock-knock
 
-###Features implemented:
+### Features implemented:
 
-####Admins:
+#### Admins:
 **1. Login with email and password**
   
 On home page click on Sign In, then click on "Enter as Admin". Sign in by the credentials given above. 
@@ -62,7 +62,7 @@ Follow step d. Delete option is next to the edit option.
 
 Click on "check users" option for the admin home page. There you can View the complete list of users. There user can be deleted.
 
-####Library Users
+#### Library Users
 1. Sign up is available on the application home page. 
 2. When a user is signed in, the user can perform the following three tasks. 
 
@@ -77,7 +77,7 @@ Books can be searched by
 
 
 
-####Use cases 
+#### Use cases 
 
 a) If a user is deleted, the checkout history is also deleted.
 
