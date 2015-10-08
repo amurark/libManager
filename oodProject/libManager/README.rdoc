@@ -59,6 +59,15 @@ Follow step d. Delete option is next to the edit option.
 
 Click on "check users" option at the admin home page. There you can view the complete list of users. Users/admin can be deleted.
 
+*6. View Entire checkout history for books*
+
+As an admin, once logged in, click on 'View Complete history of a book' in the homepage. Enter the ISBN of the book, you want to check the histoy for. Submit and view the results
+
+*6. View Entire checkout history for users*
+
+As an admin, once logged in, click on 'View Complete history of a user' in the homepage. Enter the email of the user you want to check the histoy for. Submit and view the results
+
+
 #### Library Users
 1. Sign up is available on the application home page. 
 2. When a user is signed in, the user can perform the following three tasks. 
@@ -76,10 +85,15 @@ Books can be searched by ISBN, Title, Author or by Description, in the "check ou
 
 #### Use cases 
 
-a) If a user is deleted, the checkout history is also deleted.
+    a) If a user is deleted, the checkout history is also deleted.
 
-b) If a book is deleted, the checkout history is also deleted.
+    b) If a book is deleted, the checkout history is also deleted.
 
-c) An admin cannot delete a checked out book
+    c) An admin cannot delete a checked out book
 
-d) An admin cannot delete a user/admin who has checked out a book.
+    d) An admin cannot delete a user/admin who has checked out a book.
+
+
+#### Bonus functionality
+
+1. As a user, go to any checked-out book and check the details of the book. Click on the norify button to get an email when the book is returned and available.
