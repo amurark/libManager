@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   resources :books do
     member do
       get :checkout
+      get :checkoutad
       get :returnit
     end
   end

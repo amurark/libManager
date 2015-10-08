@@ -483,6 +483,18 @@ tr a:active, tr a:hover, tr a:visited {
     font-size: 18px;
     color: #3aab90;
 }
+.bookDetailHeader2 {
+    padding-top: 10px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    font-size: 18px;
+    color: #3aab90;
+    text-align: center;
+}
+.adminReturn
+{
+    text-align: center;
+}
 .bookDetails {
     margin:0;
     background: transparent;

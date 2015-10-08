@@ -37,6 +37,7 @@ class BooksController < ApplicationController
   def checkout
       flag = 0 
       book = Book.find(params[:id])
+      @user = User.where(:email => params[:isbn])
       @books=Book.all
       @books.each do|book|
        if (book.Lastuser == current_user.email)       
@@ -50,6 +51,39 @@ class BooksController < ApplicationController
         book.Lastuser = current_user.email
         book.save
         History.create(:book_isbn => book.ISBN, :user_email => current_user.email, :book_title => book.Title, :book_author => book.Authors, :checkout_time => DateTime.now)
+        flash[:notice] = 'Book was sucessfully checked out'           
+      end 
+     redirect_to book_path(book)      
+  end
+
+  # for checkout  on behalf of user and toggling book availability status
+  def checkoutad
+      flag = 0 
+      flag2 = 0
+      book = Book.find(params[:id])
+      @user = User.where(:email => params[:email])
+      @books=Book.all
+      @books.each do|book|
+       if (book.Lastuser == params[:email])       
+         flag = 1 
+         flash[:notice] = 'User has another book checked out already' 
+       end
+      end
+      @users=User.all
+      @users.each do|user|
+       if (user.email == params[:email])       
+         flag2 = 1
+       end
+      end
+      if flag2 == 0   
+        flash[:notice] = 'Invalid user email'
+      end
+      if ((flag == 0) && (flag2 == 1)) 
+        book = Book.find(params[:id])
+        book.Status = !book.Status 
+        book.Lastuser = params[:email]
+        book.save
+        History.create(:book_isbn => book.ISBN, :user_email => params[:email], :book_title => book.Title, :book_author => book.Authors, :checkout_time => DateTime.now)
         flash[:notice] = 'Book was sucessfully checked out'           
       end 
      redirect_to book_path(book)      

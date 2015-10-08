@@ -2,16 +2,16 @@
 
 one:
   email: MyString
-  name: MyString
-  type: false
+  name: "abc"
+  ty: false
   age: 1
   sex: false
-  pnum: 1
+  pn: 1
 
 two:
-  email: MyString
-  name: MyString
-  type: false
+  email: ""
+  name: "abc xyz"
+  ty: false
   age: 1
   sex: false
-  pnum: 1
+  pn: 1

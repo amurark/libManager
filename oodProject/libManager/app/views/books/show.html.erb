@@ -21,7 +21,7 @@
         <td><%= @book.Description %></td>
       </tr>
       <% if current_user.ty == 0 || current_user.ty == 1 %>
-          <tr>
+      <tr>
             <td><strong>Current Book holder:</strong></td>
             <% if @book.Lastuser != "null" %>
                 <td><%= @book.Lastuser%></td>
@@ -43,6 +43,19 @@
         </td>
       </tr>
     </table>
+    <hr>
+      <% if ((current_user.ty == 0 || current_user.ty == 1) && (@book.Status==false)) %>
+          <div class = "bookDetailHeader2">Checkout a book on behalf of another user</div>
+          <%= form_tag checkoutad_book_path(@book), method: "get" do %>
+              <%= text_field_tag :email, params[:email], class: "formInput", placeholder: "Enter user email ID:" %>
+              <%= submit_tag "Checkout", :name => nil, class: "searchButton seaGreenButton" %>
+          <% end %>
+      <% end %>
+
+      <% if ((current_user.ty == 0 || current_user.ty == 1) && (@book.Status==true)) %>
+          <div class = "bookDetailHeader2">Return a book on behalf of another user</div>
+          <div class = "adminReturn"><div class = "checkoutButton"><%=link_to (@book.Status ? "Return on behalf of user" : " Can't Return"), returnit_book_path(@book) %></div></div>
+      <% end %>
 </div>
 
 
