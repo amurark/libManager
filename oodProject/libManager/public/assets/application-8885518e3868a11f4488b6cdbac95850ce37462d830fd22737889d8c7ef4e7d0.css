@@ -1,0 +1,902 @@
+/* line 1, /Users/Ankit/oodProject/libManager/app/assets/stylesheets/bootstrap.css */
+table a:link {
+  color: #666;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* line 6, /Users/Ankit/oodProject/libManager/app/assets/stylesheets/bootstrap.css */
+table a:visited {
+  color: #999999;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* line 11, /Users/Ankit/oodProject/libManager/app/assets/stylesheets/bootstrap.css */
+table a:active,
+table a:hover {
+  color: #bd5a35;
+  text-decoration: underline;
+}
+
+/* line 16, /Users/Ankit/oodProject/libManager/app/assets/stylesheets/bootstrap.css */
+table {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #666;
+  font-size: 12px;
+  text-shadow: 1px 1px 0px #fff;
+  /*background:#eaebec;*/
+  margin: 20px auto;
+  /*border:#ccc 1px solid;*/
+  /*-moz-box-shadow: 0 1px 2px #d1d1d1;*/
+  /*-webkit-box-shadow: 0 1px 2px #d1d1d1;*/
+  /*box-shadow: 0 1px 2px #d1d1d1;*/
+}
+
+/* line 28, /Users/Ankit/oodProject/libManager/app/assets/stylesheets/bootstrap.css */
+table th {
+  padding: 10px 25px 10px 25px;
+  border-top: 1px solid #fafafa;
+  border-bottom: 1px solid #e0e0e0;
+  background: #ededed;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ededed), to(#ebebeb));
+  background: -moz-linear-gradient(top, #ededed, #ebebeb);
+}
+
+/* line 37, /Users/Ankit/oodProject/libManager/app/assets/stylesheets/bootstrap.css */
+table th:first-child {
+  text-align: left;
+  padding-left: 20px;
+}
+
+/* line 41, /Users/Ankit/oodProject/libManager/app/assets/stylesheets/bootstrap.css */
+table tr:first-child th:first-child {
+  border-top-left-radius: 3px;
+}
+
+/* line 46, /Users/Ankit/oodProject/libManager/app/assets/stylesheets/bootstrap.css */
+table tr:first-child th:last-child {
+  border-top-right-radius: 3px;
+}
+
+/* line 51, /Users/Ankit/oodProject/libManager/app/assets/stylesheets/bootstrap.css */
+table tr {
+  text-align: center;
+  padding-left: 20px;
+}
+
+/* line 55, /Users/Ankit/oodProject/libManager/app/assets/stylesheets/bootstrap.css */
+table td:first-child {
+  text-align: left;
+  padding-left: 20px;
+  border-left: 0;
+}
+
+/* line 60, /Users/Ankit/oodProject/libManager/app/assets/stylesheets/bootstrap.css */
+table td {
+  padding: 10px;
+  background: #fafafa;
+}
+
+/* line 64, /Users/Ankit/oodProject/libManager/app/assets/stylesheets/bootstrap.css */
+table tr.even td {
+  background: #f6f6f6;
+}
+
+/* line 67, /Users/Ankit/oodProject/libManager/app/assets/stylesheets/bootstrap.css */
+table tr:last-child td {
+  border-bottom: 0;
+}
+
+/* line 70, /Users/Ankit/oodProject/libManager/app/assets/stylesheets/bootstrap.css */
+table tr:last-child td:first-child {
+  border-bottom-left-radius: 3px;
+}
+
+/* line 75, /Users/Ankit/oodProject/libManager/app/assets/stylesheets/bootstrap.css */
+table tr:last-child td:last-child {
+  border-bottom-right-radius: 3px;
+}
+
+/* line 80, /Users/Ankit/oodProject/libManager/app/assets/stylesheets/bootstrap.css */
+table tr:hover td {
+  background: #f2f2f2;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f2f2f2), to(#f0f0f0));
+  background: -moz-linear-gradient(top, #f2f2f2, #f0f0f0);
+}
+.booksHeader
+{
+    position: relative;
+    top:80px;
+    width: 100%;
+    text-align: center;
+}
+
+.booksHeader2
+{
+    position: relative;
+    top: 100px;
+    width: 100%;
+    text-align: center;
+}
+
+.booksOptions
+{
+    position: relative;
+    top : 150px;
+}
+.bookList
+{
+    position: relative;
+    top : 150px;
+    text-align: center;
+}
+
+.ghost-button2 {
+    display: block;
+    width: 400px;
+    padding: 10px;
+    color: #4567ff;
+    border: 1px solid #4567ff;
+    text-align: center;
+    outline: none;
+    text-decoration: none;
+    left: 0;
+    right: 0;
+    margin: 30px auto;
+}
+.ghost-button2:hover,
+.ghost-button2:active,
+.ghost-button2:visited {
+    background-color: rgba(69, 103, 255, 0.2);
+    color: #4567ff;
+}
+table a:link {
+    color: #666;
+    font-weight: bold;
+    text-decoration:none;
+}
+table a:visited {
+    color: #999999;
+    font-weight:bold;
+    text-decoration:none;
+}
+table a:active,
+table a:hover {
+    color: #bd5a35;
+    text-decoration:underline;
+}
+table {
+    font-family:Arial, Helvetica, sans-serif;
+    color:#666;
+    font-size:12px;
+    text-shadow: 1px 1px 0px #fff;/*background:#eaebec;*/
+
+    margin:20px auto;
+    /*border:#ccc 1px solid;*/
+    /*-moz-box-shadow: 0 1px 2px #d1d1d1;*/
+    /*-webkit-box-shadow: 0 1px 2px #d1d1d1;*/
+    /*box-shadow: 0 1px 2px #d1d1d1;*/
+}
+table th {
+    padding:10px 25px 10px 25px;
+    border-top:1px solid #fafafa;
+    border-bottom:1px solid #e0e0e0;
+
+    background: #ededed;
+    background: -webkit-gradient(linear, left top, left bottom, from(#ededed), to(#ebebeb));
+    background: -moz-linear-gradient(top,  #ededed,  #ebebeb);
+}
+table th:first-child {
+    text-align: left;
+    padding-left:20px;
+}
+table tr:first-child th:first-child {
+    border-top-left-radius:3px;
+}
+table tr:first-child th:last-child {
+    border-top-right-radius:3px;
+}
+table tr {
+    text-align: center;
+    padding-left:20px;
+}
+table td:first-child {
+    text-align: left;
+    padding-left:20px;
+    border-left: 0;
+}
+table td {
+    padding:10px;
+    background: #fafafa;
+}
+table tr.even td {
+    background: #f6f6f6;
+}
+table tr:last-child td {
+    border-bottom:0;
+}
+table tr:last-child td:first-child {
+    border-bottom-left-radius:3px;
+}
+table tr:last-child td:last-child {
+    border-bottom-right-radius:3px;
+}
+table tr:hover td {
+    background: #f2f2f2;
+    background: -webkit-gradient(linear, left top, left bottom, from(#f2f2f2), to(#f0f0f0));
+    background: -moz-linear-gradient(top,  #f2f2f2,  #f0f0f0);
+}
+/* line 1, /Users/Ankit/oodProject/libManager/app/assets/stylesheets/scaffolds.scss */
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 9, /Users/Ankit/oodProject/libManager/app/assets/stylesheets/scaffolds.scss */
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 15, /Users/Ankit/oodProject/libManager/app/assets/stylesheets/scaffolds.scss */
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+/* line 21, /Users/Ankit/oodProject/libManager/app/assets/stylesheets/scaffolds.scss */
+a {
+  color: #000;
+}
+/* line 24, /Users/Ankit/oodProject/libManager/app/assets/stylesheets/scaffolds.scss */
+a:visited {
+  color: #666;
+}
+/* line 28, /Users/Ankit/oodProject/libManager/app/assets/stylesheets/scaffolds.scss */
+a:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+/* line 35, /Users/Ankit/oodProject/libManager/app/assets/stylesheets/scaffolds.scss */
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+/* line 40, /Users/Ankit/oodProject/libManager/app/assets/stylesheets/scaffolds.scss */
+#notice {
+  color: green;
+}
+
+/* line 44, /Users/Ankit/oodProject/libManager/app/assets/stylesheets/scaffolds.scss */
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+/* line 50, /Users/Ankit/oodProject/libManager/app/assets/stylesheets/scaffolds.scss */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+/* line 58, /Users/Ankit/oodProject/libManager/app/assets/stylesheets/scaffolds.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0px;
+  background-color: #c00;
+  color: #fff;
+}
+/* line 69, /Users/Ankit/oodProject/libManager/app/assets/stylesheets/scaffolds.scss */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
+
+body
+{
+    padding: 0;
+    margin: 0;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+
+input:focus { outline: none; }
+.hpTopBar
+{
+    position: absolute;
+    top: 0;
+    height: 50px;
+    width: 100%;
+    background: rgb(0, 0, 0);
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    border-bottom: 1px solid rgba(0,0,0,0.8);
+}
+.hpHeader
+{
+    position: absolute;
+    width: 200px;
+    margin: auto;
+    line-height: 50px;
+    color: rgb(255,255,255);
+    left: 20px;
+    font-size: 21px;
+    background: url('Drawing_2.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 5px;
+    height: 40px;
+}
+
+.hpBody
+{
+    position: absolute;
+    top: 50px;
+    bottom: 0;
+    width: 100%;
+    padding: 80px 0;
+}
+
+.ghost-button {
+    display: block;
+    width: 340px;
+    padding: 10px;
+    color: #9418ff;
+    border: 1px solid #9418ff;
+    text-align: center;
+    outline: none;
+    text-decoration: none;
+    left: 0;
+    right: 0;
+    margin: 30px auto;
+}
+.ghost-button:hover,
+.ghost-button:active,
+.ghost-button:visited {
+    background-color: rgba(85, 12, 255, 0.2);
+    color: #9418ff;
+}
+
+.ghost-button {
+    display: block;
+    width: 340px;
+    padding: 10px;
+    color: #317ee1;
+    border: 1px solid #317ee1;
+    text-align: center;
+    outline: none;
+    text-decoration: none;
+    left: 0;
+    right: 0;
+    margin: 30px auto;
+}
+.ghost-button:hover,
+.ghost-button:visited {
+    background: white;
+    box-shadow: 0px 1px 1px 1px rgba(49, 126, 225, 0.2);
+    -webkit-box-shadow: 0px 1px 1px 1px rgba(49, 126, 225, 0.2);
+    color: #317ee1;
+}
+
+.ghost-button:active {
+    background: white;
+    box-shadow: 0px 1px 1px 2px rgba(49, 126, 225, 0.2);
+    -webkit-box-shadow: 0px 1px 1px 2px rgba(49, 126, 225, 0.2);
+    color: #317ee1;
+}
+
+.formBody {
+    position: relative;
+    width: 400px;
+    background: rgba(239,239,239,.5);
+    border: 1px solid rgba(239,239,239,.8);
+    left: 0;
+    right: 0;
+    top: 150px;
+    margin: 0 auto;
+    padding-top: 15px;
+    padding-bottom: 60px;
+    box-sizing: border-box;
+}
+.formHeader {
+    padding-bottom: 15px;
+    text-align: center;
+    /*color: #5a5c60;*/
+    color: #a80000;
+}
+.formInput {
+    -webkit-appearance: none;
+    -webkit-rtl-ordering: logical;
+    -webkit-user-select: text;
+    background-color: rgb(255, 255, 255);
+    border-bottom-color: rgb(204, 204, 204);
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-left-color: rgb(204, 204, 204);
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: rgb(204, 204, 204);
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-color: rgb(204, 204, 204);
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-top-style: solid;
+    border-top-width: 1px;
+    box-shadow: rgba(0, 0, 0, 0.0745098) 0px 1px 1px 0px inset;
+    box-sizing: border-box;
+    color: rgb(85, 85, 85);
+    cursor: auto;
+    display: block;
+    font-size: 12px;
+    height: 40px;
+    letter-spacing: normal;
+    line-height: 20px;
+    padding-bottom: 6px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 6px;
+    text-align: start;
+    text-indent: 0px;
+    text-rendering: auto;
+    -webkit-transition-delay: 0s, 0s;
+            transition-delay: 0s, 0s;
+    -webkit-transition-duration: 0.15s, 0.15s;
+            transition-duration: 0.15s, 0.15s;
+    -webkit-transition-property: border-color, box-shadow;
+            transition-property: border-color, box-shadow;
+    -webkit-transition-timing-function: ease-in-out, ease-in-out;
+            transition-timing-function: ease-in-out, ease-in-out;
+    width: 300px;
+    word-spacing: 0px;
+    margin: 0px auto 20px auto;
+    left: 0;
+    right: 0;
+}
+.formInput:focus {
+    border-color: #66afe9;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+}
+
+.field_with_errors {
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background-color: transparent !important;
+}
+.field_with_errors>.formInput {
+    border-color: #e93c2c;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(233, 47, 33, 0.6);
+}
+
+.alert-error
+{
+    text-align: center;
+}
+
+#error_expl>ul
+{
+    list-style: none;
+}
+
+.flash
+{
+    font-size: 18px;
+    color: dodgerblue;
+    top: 80px;
+    position: relative;
+    text-align: center;
+}
+
+.button {
+    position: absolute;
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    font-size: 14px;
+    font-stretch: normal;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    height: 36px;
+    letter-spacing: normal;
+    line-height: 22px;
+    padding-bottom: 6px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 6px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: 150px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    text-decoration: none;
+    font-size: 12px;
+}
+.signUpButton {
+    background-color: #1fab78;
+    border-bottom-color: #198a61;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-left-color: #198a61;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: #198a61;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-color: #198a61;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-top-style: solid;
+    border-top-width: 1px;
+}
+.signUpButton:hover {
+    color: #fff;
+    background-color: #1c9375;
+    border-color: #1c9375;
+}
+
+.loginButton {
+    position: absolute;
+    top: 10px;
+    margin: 0 -120px;
+    left: 100%;
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    font-stretch: normal;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    font-size: 12px;
+    height: 30px;
+    letter-spacing: normal;
+    line-height: 17px;
+    padding-bottom: 6px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 6px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: 80px;
+    text-decoration: none;
+    background-color: #267fdf;
+    border-bottom-color: #165a99;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-left-color: #165a99;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: #165a99;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-color: #165a99;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-top-style: solid;
+    border-top-width: 1px;
+}
+.loginButton:visited
+{
+    color: #fff;
+}
+.loginButton:hover {
+    background-color: #1368de;
+    border-color: #0e4ea6;
+}
+
+.searchButton
+{
+    position: absolute;
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    font-size: 14px;
+    font-stretch: normal;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    height: 36px;
+    letter-spacing: normal;
+    line-height: 22px;
+    padding-bottom: 6px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 6px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: 150px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    text-decoration: none;
+    font-size: 12px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-top-style: solid;
+    border-top-width: 1px;
+}
+.greenButton
+{
+    background-color: rgb(92, 184, 92);
+    border-bottom-color: rgb(76, 174, 76);
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-left-color: rgb(76, 174, 76);
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: rgb(76, 174, 76);
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-color: rgb(76, 174, 76);
+}
+.purpleButton
+{
+    background-color: #603fab;
+    border-bottom-color: #603fab;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-left-color: #603fab;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: #603fab;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-color: #603fab;
+}
+
+.seaGreenButton
+{
+    background-color: #3aab90;
+    border-bottom-color: #3aab90;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-left-color: #3aab90;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: #3aab90;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-color: #3aab90;
+}
+
+.blueButton
+{
+    background-color: #2061ab;
+    border-bottom-color: #2061ab;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-left-color: #2061ab;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: #2061ab;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-color: #2061ab;
+}
+.redButton
+{
+    background-color: #ab2335;
+    border-bottom-color: #ab2335;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-left-color: #ab2335;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: #ab2335;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-color: #ab2335;
+}
+
+.userName
+{
+    position:relative;
+    margin:0 auto;
+    text-align: center;
+    font-weight: bold;
+}
+
+a.userOptions
+{
+    color: white;
+    position: relative;
+    float: right;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 20px;
+    text-decoration: none;
+    border-left: 1px solid #DCDCDC;
+    margin: 10px 0;
+}
+a.userOptions:visited
+{
+    color:white;
+    text-decoration:none;
+}
+a.userOptions:hover
+{
+    color: #e1d6d9;
+    border-left: 1px solid #e1d6d9;
+    text-decoration:none;
+}
+
+tr a:active, tr a:hover, tr a:visited {
+    color: #666 !important;
+    background:transparent !important;
+    text-decoration: underline !important;
+}
+
+.bookInfo
+{
+    position:absolute;
+    top:50px;
+    bottom:0;
+    width:100%;
+    padding:50px;
+    box-sizing: border-box;
+}
+
+.bookDetailHeader {
+    padding-bottom: 15px;
+    padding-left: 20px;
+    font-size: 18px;
+    color: #3aab90;
+}
+.bookDetailHeader2 {
+    padding-top: 10px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    font-size: 18px;
+    color: #3aab90;
+    text-align: center;
+}
+.adminReturn
+{
+    text-align: center;
+}
+.bookDetails {
+    margin:0;
+    background: transparent;
+}
+.bookDetails td {
+    background: transparent;
+    text-align: left;
+}
+.bookDetails tr:hover td{
+    background: transparent;
+}
+.checkoutButton {
+    color: #fff;
+    border: 1px solid rgb(20, 169, 115);
+    box-shadow: none;
+    display: inline-block;
+    padding: 2px 5px;
+}
+.checkoutButton:hover {
+    box-shadow: 0px 1px 1px 1px rgba(20, 169, 115, 0.2);
+}
+.checkoutButton a {
+    font-weight: 400 !important;
+    color: #1fab78 !important;
+    font-size: 10px;
+    text-decoration:none !important;
+}
+.checkoutButton>a:visited{
+    color: #1fab78 !important;
+    text-decoration:none !important;
+}
+.checkoutButton>a:hover{
+    color: #1fab78 !important;
+    text-decoration:none !important;
+}
+.checkoutButton>a:active{
+    color: #1fab78 !important;
+    text-decoration:none !important;
+}
+
+.table-fonts {
+    font-size: 15px !important;
+}
+.corn-flower-blue-color:hover {
+    color: cornflowerblue;
+}
+.cadet-blue-color:hover {
+    color: cadetblue;
+}
+.brown-color:hover {
+    color: brown;
+}
+
+.topOptions {
+    position: relative;
+    top: 120px;
+    text-align: center;
+}
+.topOptions a:hover {
+    color: #000 !important;
+    background:transparent !important;
+}
+#notice
+{
+    position: relative;
+    top: 55px;
+    left: 70px;
+}
+#errorLogin
+{
+    position: absolute;
+    top: 55px;
+    width:100%;
+    color:red;
+    text-align: center;
+}
+.errorLogin
+{
+    position: absolute;
+    top: 55px;
+    width:100%;
+    color:red;
+    text-align: center;
+}
+.noBackground
+{
+    background: transparent;
+    border: 1px solid transparent;
+}
+
+input:disabled {
+    border: 1px solid #d3d3d3;
+    color:#a8a8a8;
+}
