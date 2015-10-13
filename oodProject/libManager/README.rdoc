@@ -92,7 +92,7 @@ Library Users
         Books can be searched by ISBN, Title, Author or by Description, in the "check out books" option. 
 
 
-Special test case A: The system should handle the scenario that admins delete a book which is currently checkedOut ----------------------------------
+Special test case A: The system should handle the scenario that admins delete a book which is currently checkedOut ------------------------------------------
         According to the design decision, the admins cannot delete a book which is checked out by a user currently.         If the admin still wants to go ahead and delete the book, he/she can return the book on behalf of the user          who has checked out the book and then, go forward and delete the book.
 
 Special test case B: The system should handle the scenario that admins delete users who are currently holding books
